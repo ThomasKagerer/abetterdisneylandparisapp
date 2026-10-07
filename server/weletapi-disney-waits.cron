@@ -1,0 +1,2 @@
+# Collect public ride waits continuously, independently of open browser sessions.
+* * * * * www-data /usr/bin/php /mnt/backup/webdav/files/.internal/Disney/collect-waits.php >/dev/null 2>&1

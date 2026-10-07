@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),{Dwell}=require('../dist/queue-dwell.js');
+const s=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),elements=new Map(),storage=new Map();let saved=0,renders=0;
+const $=id=>{if(!elements.has(id))elements.set(id,{dataset:{},value:'',open:false,close(){this.open=false;},addEventListener(){}});return elements.get(id);};
+const ctx={$ ,Date,userKey:'test',queueCheckin:null,queueDwell:new Dwell(),queueDwellDay:'',localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},saveQueueCheckin(){saved++;},renderLines(){},renderPins(){},renderNav(){renders++;},toast(){}};
+vm.createContext(require('./helpers/near-park.cjs')(ctx));
+vm.runInContext(s.slice(s.indexOf('function rememberQueueHint('),s.indexOf('function openQueueCheckin(')),ctx);
+vm.runInContext(s.slice(s.indexOf("$('queue-start').onclick="),s.indexOf("$('queue-finish').onclick=")),ctx);
+const day=new Date().toLocaleDateString('en-CA',{timeZone:'Europe/Paris'}),key=`test:queue-hints:${day}`;
+storage.set(key,JSON.stringify(['ride-old']));$('queue-dialog').dataset.rideId='ride-new';$('queue-dialog').open=true;$('queue-minutes').value='5';
+$('queue-start').onclick();const started=ctx.queueCheckin.startedAt;
+assert.equal(ctx.queueCheckin.id,'ride-new');assert.equal(ctx.queueCheckin.minutes,5);assert.equal(saved,1);assert.equal(renders,1);assert(!$('queue-dialog').open,'Start closes sheet so search stays accessible');
+assert(ctx.queueDwell.notified.has('ride-old'));assert(ctx.queueDwell.notified.has('ride-new'));assert.deepEqual(JSON.parse(storage.get(key)),['ride-old','ride-new']);
+$('queue-start').onclick();assert.equal(ctx.queueCheckin.startedAt,started);assert.equal(saved,1,'Repeated start must not reset timer');
+$('queue-dialog').open=true;$('queue-prompt').open=true;ctx.closeQueueForBrowse();assert(!$('queue-dialog').open);assert(!$('queue-prompt').open);assert.equal(ctx.queueCheckin.startedAt,started,'Searching does not end waiting');
+assert(s.includes("$('search').addEventListener('focus',closeQueueForBrowse)"));
+console.log('Passed: start dismisses sheet, preserves earlier hints, duplicate start preserves timer, browsing closes both sheets and keeps check-in active.');

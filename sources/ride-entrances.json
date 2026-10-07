@@ -1,0 +1,136 @@
+[
+  {
+    "rideId": "ride-14211776384",
+    "osmNode": 13618187777,
+    "kind": "entrance",
+    "evidence": "Tagged main entrance, Entrée Stand-by; excludes Single Rider and Premier Access."
+  },
+  {
+    "rideId": "ride-1011446599",
+    "osmNode": 2560362176,
+    "kind": "entrance",
+    "evidence": "Public start of the long regular queue, way 249428904."
+  },
+  {
+    "rideId": "ride-11251453535",
+    "osmNode": 12563467284,
+    "kind": "approach",
+    "evidence": "Shared public approach to Stand by way 395126454; the tagged door is absent from the walking graph."
+  },
+  {
+    "rideId": "ride-555315790",
+    "osmNode": 3297092067,
+    "kind": "entrance",
+    "evidence": "Public start of the long regular queue, way 322924299; excludes the short parallel queue."
+  },
+  {
+    "rideId": "ride-1469626867",
+    "osmNode": 10080172431,
+    "kind": "approach",
+    "evidence": "Public gate to the eastern queue lane, way 325098460; lane has no explicit regular-queue label."
+  },
+  {
+    "rideId": "ride-11263162318",
+    "osmNode": 2923663207,
+    "kind": "entrance",
+    "evidence": "Public start of winding queue way 549763894."
+  },
+  {
+    "rideId": "ride-52027319",
+    "osmNode": 10079976047,
+    "kind": "entrance",
+    "evidence": "Public start of winding queue way 342280359."
+  },
+  {
+    "rideId": "ride-11276030959",
+    "osmNode": 3493015889,
+    "kind": "approach",
+    "evidence": "Public access way 1101542516."
+  },
+  {
+    "rideId": "ride-51547889",
+    "osmNode": 8618820104,
+    "kind": "entrance",
+    "evidence": "Public start of main queue way 1214637198."
+  },
+  {
+    "rideId": "ride-1269081340",
+    "osmNode": 2714344904,
+    "kind": "entrance",
+    "evidence": "Tagged main entrance at start of queue way 265811121."
+  },
+  {
+    "rideId": "ride-1271483949",
+    "osmNode": 5041043096,
+    "kind": "entrance",
+    "evidence": "Public start of winding queue way 516384127."
+  },
+  {
+    "rideId": "ride-905816995",
+    "osmNode": 3003692203,
+    "kind": "approach",
+    "evidence": "Public queue access gate, way 296633160; unnamed lane."
+  },
+  {
+    "rideId": "ride-296573532",
+    "osmNode": 3003692226,
+    "kind": "entrance",
+    "evidence": "Public start of winding regular queue way 296573538."
+  },
+  {
+    "rideId": "ride-1223755258",
+    "osmNode": 639046861,
+    "kind": "entrance",
+    "evidence": "Public entrance gate of main outdoor queue, way 50292761."
+  },
+  {
+    "rideId": "ride-40362832",
+    "osmNode": 11420450730,
+    "kind": "entrance",
+    "evidence": "Public regular-queue entrance way 1231391866; excludes parallel Premier Access."
+  },
+  {
+    "rideId": "ride-555005100",
+    "osmNode": 3451291191,
+    "kind": "entrance",
+    "evidence": "Tagged entrance shared by regular queue way 338068227 and Premier Access."
+  },
+  {
+    "rideId": "ride-1267201555",
+    "osmNode": 3111869435,
+    "kind": "entrance",
+    "evidence": "Public start of queue way 306315115."
+  },
+  {
+    "rideId": "ride-11308499084",
+    "osmNode": 12606661843,
+    "kind": "entrance",
+    "evidence": "Public start of named Stand-by line, way 1361666398."
+  },
+  {
+    "rideId": "ride-1271516013",
+    "osmNode": 10024532531,
+    "kind": "entrance",
+    "evidence": "Entrance confirmed by the user at the blue location marker (reported GPS accuracy ±5 m) on the public walkway between Stark Factory and Spider-Man. OSM node 10024532531 on footway 1075097370 anchors the routing target; it is not a newly surveyed door coordinate.",
+    "confirmedAt": "2026-10-07",
+    "confirmation": "user-screenshot"
+  },
+  {
+    "rideId": "ride-1271516009",
+    "osmNode": 11533610391,
+    "kind": "approach",
+    "evidence": "Public approach outside the queue building. Mapped Single Rider and Premier Access doors are deliberately excluded."
+  },
+  {
+    "rideId": "ride-1012694152",
+    "osmNode": 10891931089,
+    "kind": "entrance",
+    "evidence": "Tagged entrance at start of winding queue way 1172263970."
+  },
+  {
+    "rideId": "ride-11309964890",
+    "osmNode": 3014457251,
+    "kind": "entrance",
+    "evidence": "Tagged entrance connected to public approach and indoor queue ways 1130624519 and 297557677."
+  }
+]

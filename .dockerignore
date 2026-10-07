@@ -1,0 +1,12 @@
+*
+!Dockerfile
+!dist/
+!dist/**
+!docker/
+!docker/**
+!server/
+!server/push/
+!server/push/*.cjs
+!tests/
+!tests/*.test.php
+!tests/public-deployment.test.cjs

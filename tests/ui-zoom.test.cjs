@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),{installZoomGuard}=require('../dist/surfaces.js');
+const listeners=new Map(),doc={addEventListener:(name,handler,options)=>{listeners.set(name,handler);if(['touchstart','touchmove','gesturestart','gesturechange'].includes(name))assert.equal(options.passive,false);}};
+installZoomGuard(doc);
+const ui={closest:()=>null},map={closest:()=>({})};
+const run=(name,targets,target=targets[0])=>{let blocked=false;listeners.get(name)({touches:targets.map(target=>({target})),target,cancelable:true,preventDefault(){blocked=true;}});return blocked;};
+assert(!run('touchstart',[ui]));assert(!run('touchmove',[ui]),'One finger still scrolls');
+assert(run('touchstart',[ui,ui]));assert(run('touchmove',[ui,ui]));assert(run('gesturestart',[],ui));
+assert(!run('touchstart',[map,map]));assert(!run('touchmove',[map,map]));assert(!run('gesturechange',[],map),'Map zoom, pitch and rotation remain enabled');
+assert(run('touchmove',[map,ui]),'A touch outside the map cannot zoom the whole app');run('touchend',[]);assert(run('gesturechange',[],ui));
+const html=fs.readFileSync(__dirname+'/../dist/index.html','utf8');assert(html.includes('maximum-scale=1,user-scalable=no'));
+console.log('Passed: UI multi-touch and Safari gesture zoom blocked, single-finger scroll and map gestures preserved, mixed target gesture blocked and viewport fixed.');

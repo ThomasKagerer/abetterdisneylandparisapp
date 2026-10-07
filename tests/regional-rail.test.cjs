@@ -1,0 +1,21 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),M=require('../dist/park-models.js'),C=require('../dist/map-3d.js'),scene=require('../dist/park-scene.json');
+const rail=scene.regionalRail,features=rail.tracks.features;
+assert.equal(rail.stations.length,14);
+assert.equal(rail.stations[0].name,'Marne-la-Vallée-Chessy');assert.equal(rail.stations.at(-1).name,'Gare de Lyon');
+assert(rail.stations.some(s=>s.name==='Nation'));assert(!rail.stations.some(s=>s.name==='Fontenay-sous-Bois'),'Nearby Boissy-branch station must not be included');
+assert(rail.lengthMeters>34000&&rail.lengthMeters<35000);
+assert(features.some(f=>f.properties.tunnel));assert(features.some(f=>!f.properties.tunnel));
+for(let i=1;i<features.length;i++)assert.deepEqual(features[i-1].geometry.coordinates.at(-1),features[i].geometry.coordinates[0],'Track pieces join without invented shortcuts');
+const first=features[0].geometry.coordinates[0],last=features.at(-1).geometry.coordinates.at(-1);
+assert(Math.abs(first[0]-2.78235)<.001&&Math.abs(first[1]-48.86991)<.001);assert(Math.abs(last[0]-2.373)<.001&&Math.abs(last[1]-48.844)<.001);
+assert.equal(features.at(-1).properties.tunnel,true,'RER platforms at Gare de Lyon are underground');
+const layers=C.railLayers();assert(layers.find(l=>l.id==='rer-tunnel').paint['line-dasharray']);assert.equal(layers.find(l=>l.id==='rer-overview').maxzoom,16);assert.equal(layers.find(l=>l.id==='rer-rail-0').minzoom,16);
+const compact=C.modelScene(scene,600);assert.equal(M.build(compact,[]).byteLength,M.build({...compact,regionalRail:undefined},[]).byteLength,'34 km connection adds no unculled region-wide geometry to the park mesh');
+assert(JSON.stringify(rail).length<65000,'Offline geographic data stays compact');
+// The overview keeps the selected 3D map and adds the regional layer only once.
+const src=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),start=src.indexOf('let regionalRail=null'),end=src.indexOf('function fitRoute()',start),els=new Map();
+let fetches=0,lines=0,stops=0,fit=null,pitch=null,switched=[];
+const ctx={appReady:true,AbortController,setTimeout,clearTimeout,esc:s=>s,homeView(){},setHeadingUp(){},renderFollow(){},showMap:m=>switched.push(m),toast:s=>{throw Error(s);},$:id=>{if(!els.has(id))els.set(id,{close(){}});return els.get(id);},mapMode:'3d',threeMap:{fitBounds:async(bounds)=>{fit={bounds,options:{animate:false}};pitch=25;}},walkLayer:{},map:{fitBounds:(bounds,options)=>fit={bounds,options},on(){},getZoom:()=>11},fetch:async()=>{fetches++;return{ok:true,json:async()=>scene};},L:{geoJSON:()=>({addTo(){lines++;}}),divIcon:x=>x,marker:()=>({addTo(){stops++;return this;},getElement:()=>({classList:{toggle(){}}})})}};
+vm.createContext(ctx);vm.runInContext(src.slice(start,end),ctx);
+(async()=>{await ctx.showRegionalRail();await ctx.showRegionalRail();assert.equal(fetches,1);assert.equal(lines,1);assert.equal(stops,14);assert.equal(switched.length,0,'3D selection remains active');assert.equal(pitch,25);assert.deepEqual(JSON.parse(JSON.stringify(fit.bounds)),rail.bounds);assert.equal(fit.options.animate,false);assert.equal(ctx.following,false);console.log('Passed: connected surveyed RER track, correct branch/stations, underground terminus, zoom detail, bounded mesh, cached overview and persistent 3D selection.');})().catch(e=>{console.error(e);process.exitCode=1;});

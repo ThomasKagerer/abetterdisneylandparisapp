@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const source=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),elements=new Map(),events=new Map(),calls=[];
+const $=id=>{if(!elements.has(id))elements.set(id,{open:false,dataset:{},listeners:{},addEventListener(k,f){this.listeners[k]=f;},show(){this.open=true;},showModal(){this.open=true;},close(){this.open=false;this.listeners.close?.();}});return elements.get(id);};
+const ride={id:'r',name:'Ride'},ctx={$,document:{documentElement:{dir:'ltr'}},innerWidth:402,pointById:new Map([['r',ride]]),uninterested:new Set(),objectParentDialog:null,waitHistoryParent:null,map:{closePopup(){}},renderObjectInfo(){},renderQueueCheckin(){calls.push('queue');},refreshShows(){},renderPlaylist(){},renderShowList(){},renderWaitHistoryDialog(){},renderMapObjectSheet(){},window:{history:{state:null,pushState(s){this.state=s;calls.push('push');},back(){calls.push('back');}},addEventListener(k,f){events.set(k,f);}}};
+vm.createContext(ctx);
+vm.runInContext(source.slice(source.indexOf('function openObjectInfo('),source.indexOf("$('object-map').onclick=")),ctx);
+vm.runInContext(source.slice(source.indexOf('// A horizontal right swipe'),source.indexOf('function childBadge(')),ctx);
+$('queue-dialog').dataset.rideId='r';$('queue-dialog').show();ctx.openObjectInfo('r');assert(!$('queue-dialog').open);assert($('object-dialog').open);assert.equal(calls.at(-1),'push');
+const swipe=(dx,dy)=>{$('object-dialog').listeners.touchstart({touches:[{clientX:30,clientY:150}]});$('object-dialog').listeners.touchend({changedTouches:[{clientX:30+dx,clientY:150+dy}]});};
+swipe(5,150);assert($('object-dialog').open,'Vertical scrolling does not dismiss');swipe(-120,0);assert($('object-dialog').open,'Left swipe does not dismiss');swipe(120,10);assert(!$('object-dialog').open);assert($('queue-dialog').open);assert(calls.includes('back'));
+ctx.openObjectInfo('r');ctx.window.history.state=null;events.get('popstate')();assert(!$('object-dialog').open);assert($('queue-dialog').open,'Browser back restores running queue sheet');
+ctx.document.documentElement.dir='rtl';ctx.openObjectInfo('r');$('object-dialog').listeners.touchstart({touches:[{clientX:398,clientY:150}]});$('object-dialog').listeners.touchend({changedTouches:[{clientX:260,clientY:155}]});assert(!$('object-dialog').open,'RTL back swipe begins at right edge and moves left');assert($('queue-dialog').open,'RTL also restores the queue');
+const html=fs.readFileSync(__dirname+'/../dist/index.html','utf8');assert(html.includes('<button id="queue-title"'));assert(html.includes('<button id="map-object-title"'));assert(html.includes('<button id="nav-target"'));assert(!html.includes('<strong id="nav-target"'));
+console.log('Passed: fullscreen info entry from queue, right swipe only, browser back and previous queue restoration.');

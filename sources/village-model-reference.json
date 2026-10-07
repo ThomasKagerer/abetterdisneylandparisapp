@@ -1,0 +1,14 @@
+{
+  "retrieved": "2026-10-07",
+  "villageSource": "https://www.disneylandparis.com/en-gb/destinations/disney-village",
+  "balloonSource": "https://panoramagique.com/panoramagique/le-ballon",
+  "photoReference": "https://panoramagique.com/content/medias/Pano/1920/cb27a350-fcfa-3b02-28ee-fa58d0c26a38.jpg",
+  "osmVillage": "way188316843",
+  "osmLake": "way23942961",
+  "osmMooring": "way253840775",
+  "diameterMeters": 22.5,
+  "totalBalloonHeightMeters": 35,
+  "maxFlightHeightMeters": 100,
+  "modelBasketHeightMeters": 80,
+  "note": "Illustrative tethered flight pose, not live balloon availability. Procedural geometry; official photograph is a visual reference only, not published as a texture."
+}

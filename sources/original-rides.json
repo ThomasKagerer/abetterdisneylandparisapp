@@ -1,0 +1,593 @@
+[
+  {
+    "id": "ride-11308499084",
+    "name": "\"it's a small world\"",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8748532,
+      2.7760706
+    ],
+    "node": 2406,
+    "offset": 14,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 19
+    }
+  },
+  {
+    "id": "ride-26625259",
+    "name": "Adventure Isle",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87258888203883,
+      2.773542091262136
+    ],
+    "node": 333,
+    "offset": 3,
+    "type": "walkthrough",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 2702
+    }
+  },
+  {
+    "id": "ride-905816888",
+    "name": "Alice's Curious Labyrinth",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87449,
+      2.7744865
+    ],
+    "node": 2336,
+    "offset": 3,
+    "type": "walkthrough",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 14
+    }
+  },
+  {
+    "id": "ride-204210418",
+    "name": "Autopia",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.873233854545454,
+      2.7789320757575755
+    ],
+    "node": 3425,
+    "offset": 23,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 4
+    }
+  },
+  {
+    "id": "ride-1011446599",
+    "name": "Big Thunder Mountain",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.871738,
+      2.776261
+    ],
+    "node": 16,
+    "offset": 2,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 25
+    }
+  },
+  {
+    "id": "ride-1267201555",
+    "name": "Blanche-Neige et les Sept Nains®",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87336843055555,
+      2.775434997222222
+    ],
+    "node": 1083,
+    "offset": 13,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 15
+    }
+  },
+  {
+    "id": "ride-905816995",
+    "name": "Buzz Lightyear Laser Blast",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8735115,
+      2.7778416
+    ],
+    "node": 745,
+    "offset": 13,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 5
+    }
+  },
+  {
+    "id": "ride-1012694152",
+    "name": "Casey Jr. – le Petit Train du Cirque",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8753865,
+      2.7741758
+    ],
+    "node": 4204,
+    "offset": 2,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 17
+    }
+  },
+  {
+    "id": "ride-905816849",
+    "name": "Drache unter dem Schloss",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8730526,
+      2.7757734
+    ],
+    "node": 999,
+    "offset": 6,
+    "type": "walkthrough",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 2710
+    }
+  },
+  {
+    "id": "ride-51551435",
+    "name": "Dumbo the Flying Elephant",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87398901,
+      2.77458217
+    ],
+    "node": 1134,
+    "offset": 13,
+    "type": "carousel",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 18
+    }
+  },
+  {
+    "id": "ride-40362832",
+    "name": "Indiana Jones™ and the Temple of Peril",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87212790933334,
+      2.771822097333333
+    ],
+    "node": 4015,
+    "offset": 35,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 2
+    }
+  },
+  {
+    "id": "ride-302301688",
+    "name": "Le Carrousel de Lancelot",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87374002926829,
+      2.77537606097561
+    ],
+    "node": 2919,
+    "offset": 16,
+    "type": "carousel",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 16
+    }
+  },
+  {
+    "id": "ride-1012678087",
+    "name": "Le Pays des Contes de Fées, présenté par Vittel",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8753427,
+      2.774695
+    ],
+    "node": 6985,
+    "offset": 6,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 21
+    }
+  },
+  {
+    "id": "ride-1267201556",
+    "name": "Les Voyages de Pinocchio",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87353495087719,
+      2.774969205263158
+    ],
+    "node": 1098,
+    "offset": 9,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 23
+    }
+  },
+  {
+    "id": "ride-78038415",
+    "name": "Mad Hatter's Tea Cups",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8744045520548,
+      2.775166479452055
+    ],
+    "node": 3396,
+    "offset": 14,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 20
+    }
+  },
+  {
+    "id": "ride-296573532",
+    "name": "Orbitron",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.873563707317075,
+      2.7783857390243902
+    ],
+    "node": 806,
+    "offset": 7,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 7
+    }
+  },
+  {
+    "id": "ride-555315790",
+    "name": "Peter Pan's Flight",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.873634,
+      2.77406
+    ],
+    "node": 2255,
+    "offset": 4,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 22
+    }
+  },
+  {
+    "id": "ride-1223755258",
+    "name": "Phantom Manor",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.870877,
+      2.776997
+    ],
+    "node": 5348,
+    "offset": 9,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 26
+    }
+  },
+  {
+    "id": "ride-555005100",
+    "name": "Pirates of the Caribbean",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.873424,
+      2.772952
+    ],
+    "node": 2238,
+    "offset": 2,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 3
+    }
+  },
+  {
+    "id": "ride-1359852391",
+    "name": "Schloss-Rundgang",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.87316171315789,
+      2.7760847842105263
+    ],
+    "node": 558,
+    "offset": 7,
+    "type": "walkthrough",
+    "approximateEntrance": true
+  },
+  {
+    "id": "ride-11309964890",
+    "name": "Star Tours : L'Aventure Continue",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.8749098,
+      2.7790507
+    ],
+    "node": 2109,
+    "offset": 12,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 9
+    }
+  },
+  {
+    "id": "ride-11251453535",
+    "name": "Star Wars Hyperspace Mountain",
+    "park": "Disneyland Park",
+    "latlng": [
+      48.873727,
+      2.778939
+    ],
+    "node": 910,
+    "offset": 9,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 4,
+      "rideId": 8
+    }
+  },
+  {
+    "id": "ride-1271516009",
+    "name": "Avengers Assemble: Flight Force",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.865354,
+      2.779342
+    ],
+    "node": 3982,
+    "offset": 3,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 10848
+    }
+  },
+  {
+    "id": "ride-52027319",
+    "name": "Cars Quatre Roues Rallye",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.86773534210526,
+      2.778042130263158
+    ],
+    "node": 2817,
+    "offset": 15,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 31
+    }
+  },
+  {
+    "id": "ride-9418185128",
+    "name": "Cars ROAD TRIP",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.8664721,
+      2.7747913
+    ],
+    "node": 3926,
+    "offset": 8,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 29
+    }
+  },
+  {
+    "id": "ride-11263162318",
+    "name": "Crush's Coaster",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.8681109,
+      2.7778898
+    ],
+    "node": 688,
+    "offset": 16,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 32
+    }
+  },
+  {
+    "id": "ride-14211776384",
+    "name": "Frozen Ever After",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.8640748,
+      2.7734299
+    ],
+    "node": 7099,
+    "offset": 6,
+    "type": "log_flume",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 15413
+    }
+  },
+  {
+    "id": "ride-11276030959",
+    "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.8682805,
+      2.7783643
+    ],
+    "node": 1220,
+    "offset": 15,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 33
+    }
+  },
+  {
+    "id": "ride-51547889",
+    "name": "RC Racer",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.866833574999994,
+      2.7764178166666666
+    ],
+    "node": 608,
+    "offset": 16,
+    "type": "roller_coaster",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 34
+    }
+  },
+  {
+    "id": "ride-1338725879",
+    "name": "Raiponce Tangled Spin",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.866267444444446,
+      2.7764600555555554
+    ],
+    "node": 6863,
+    "offset": 15,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 15415
+    }
+  },
+  {
+    "id": "ride-1269073076",
+    "name": "Ratatouille : L'Aventure totalement toquée de Rémy",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.867786186274515,
+      2.7759793215686273
+    ],
+    "node": 612,
+    "offset": 25,
+    "type": "dark_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 37
+    }
+  },
+  {
+    "id": "ride-1269081340",
+    "name": "Slinky® Dog Zigzag Spin",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.86706903469388,
+      2.7767316795918364
+    ],
+    "node": 6232,
+    "offset": 5,
+    "type": "amusement_ride",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 36
+    }
+  },
+  {
+    "id": "ride-1271516013",
+    "name": "Spider-Man W.E.B. Adventure",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.86600806129032,
+      2.7791920258064517
+    ],
+    "node": 2782,
+    "offset": 28,
+    "type": "toilets",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 10845
+    }
+  },
+  {
+    "id": "ride-1469626867",
+    "name": "The Twilight Zone Tower of Terror",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.866508248275856,
+      2.7786479396551726
+    ],
+    "node": 7319,
+    "offset": 25,
+    "type": "drop_tower",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 40
+    }
+  },
+  {
+    "id": "ride-1271483949",
+    "name": "Toy Soldiers Parachute Drop",
+    "park": "Disney Adventure World",
+    "latlng": [
+      48.86712066,
+      2.7774162488888887
+    ],
+    "node": 641,
+    "offset": 10,
+    "type": "drop_tower",
+    "approximateEntrance": true,
+    "queueTimes": {
+      "parkId": 28,
+      "rideId": 35
+    }
+  }
+]

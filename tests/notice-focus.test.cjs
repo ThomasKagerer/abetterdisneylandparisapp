@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const source=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),ride={id:'ride-show',name:'Show',latlng:[48.87,2.77]},calls=[];
+const route={order:['ride-other']},ctx={uninterested:new Set(),targetAvailable:()=>true,appReady:true,pendingNoticeId:null,focusedRideId:null,openMapObjectSheet:id=>calls.push(['sheet',id]),route,following:true,pointById:new Map([[ride.id,ride]]),popupWaits:new Map([[ride.id,{marker:{openPopup:()=>calls.push('popup')}}]]),homeView:v=>calls.push(v),showNavigationMap:()=>calls.push('geo'),setHeadingUp:v=>calls.push(v),renderFollow(){},renderPins(){},map:{setView:(pt,z)=>calls.push([pt,z])}};
+vm.createContext(require('./helpers/near-park.cjs')(ctx));vm.runInContext(source.slice(source.indexOf('function focusRideOnMap('),source.indexOf('function updatePopupTravel(')),ctx);
+ctx.focusRideOnMap(ride.id);assert(calls.includes('map'));assert(calls.includes('geo'));assert(calls.some(c=>Array.isArray(c)&&c[0]==='sheet'&&c[1]===ride.id));assert(calls.some(c=>Array.isArray(c)&&c[1]===18));assert.equal(ctx.route,route);assert.equal(ctx.focusedRideId,ride.id);assert.equal(ctx.following,false);
+ctx.appReady=false;ctx.focusRideOnMap(ride.id);assert.equal(ctx.pendingNoticeId,ride.id);
+const sw=fs.readFileSync(__dirname+'/../dist/sw.js','utf8');assert(sw.includes("'disney-open-notice'"));assert(sw.includes("'disney-open-checkin'"));
+console.log('Passed: push target zoom/compact sheet, route preserved, notice queued during loading, existing client receives message.');
+const box={hidden:true,dataset:{},replaceChildren(){this.firstElementChild=null;},set innerHTML(v){this.firstElementChild={textContent:''};}},status={},dialog={open:false};
+Object.assign(ctx,{data:{},navigator:{onLine:true},lastFix:Date.now(),position:{},shows:new Map(),router:{},showsFetchedAt:Date.now(),nearbyShows:[],parkMatches:()=>true,document:{body:{classList:{toggle(){}}}},$:id=>id==='nearby-shows'?box:id==='shows-dialog'?dialog:status,DisneyShows:{nearby:()=>[{ride,start:Date.now()+600000,walkMinutes:7}]}});
+vm.runInContext(source.slice(source.indexOf('function renderNearbyShows('),source.indexOf('function renderShowList(')),ctx);ctx.renderNearbyShows();assert.equal(box.hidden,false);assert(box.firstElementChild.textContent.includes('7 Min. zu Fuß'));const first=box.firstElementChild;ctx.renderNearbyShows();assert.equal(box.firstElementChild,first,'Hint button is not recreated on refresh');
+console.log('Passed: compact hint includes walking minutes and preserves its click target on refresh.');

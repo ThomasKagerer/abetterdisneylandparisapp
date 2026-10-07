@@ -1,0 +1,45 @@
+const assert=require('node:assert/strict'),{today}=require('../dist/show-times.js');
+const now=Date.parse('2026-10-05T13:15:00+02:00');
+const show={showtimes:[{startTime:'2026-10-05T18:00:00+02:00',endTime:'2026-10-05T18:30:00+02:00'},{startTime:'invalid'},{startTime:'2026-10-04T18:00:00+02:00'},{startTime:'2026-10-05T13:00:00+02:00',endTime:'2026-10-05T13:30:00+02:00'},{startTime:'2026-10-05T11:00:00+02:00'},{startTime:'2026-10-05T18:00:00+02:00'},{startTime:'2026-10-06T00:00:00+02:00'}]};
+assert.deepEqual(today(show,now).map(x=>x.state),['running','upcoming']);assert.equal(today(null,now).length,0);
+assert.equal(today({showtimes:[{startTime:'2026-10-04T22:30:00Z'}]},Date.parse('2026-10-05T00:35:00+02:00')).length,1,'UTC previous day falls on today in Paris');
+console.log('Passed: all today slots beyond nearby window, past/current/future, Paris day boundaries, duplicates, invalid and unavailable times.');
+
+assert.equal(today({showtimes:[{startTime:new Date(now-900000).toISOString()}]},now).length,1);assert.equal(today({showtimes:[{startTime:new Date(now-900001).toISOString()}]},now).length,0);
+
+const {hasRemainingToday}=require('../dist/show-times.js');
+const at=value=>Date.parse(`2026-10-05T${value}:00+02:00`),slot=(start,end)=>({startTime:new Date(at(start)).toISOString(),...(end?{endTime:new Date(at(end)).toISOString()}: {})});
+assert.equal(hasRemainingToday({showtimes:[slot('13:00','13:30')]},at('13:15'),at('12:00')),true,'A running show remains visible');
+assert.equal(hasRemainingToday({showtimes:[slot('13:00','13:30')]},at('13:30'),at('12:00')),false,'Hide as soon as the last performance is over');
+assert.equal(hasRemainingToday({showtimes:[slot('13:00'),slot('18:00')]},at('15:00'),at('12:00')),true,'An evening performance keeps the show visible');
+assert.equal(hasRemainingToday({showtimes:[slot('18:00')]},at('18:00'),at('12:00')),true);
+assert.equal(hasRemainingToday({showtimes:[slot('18:00')]},at('18:15'),at('12:00')),true,'Keep the exact fifteen-minute boundary in all lists');
+assert.equal(hasRemainingToday({showtimes:[slot('18:00','19:00')]},at('18:15')+1,at('12:00')),false,'Long running time must not extend the grace');
+assert.equal(hasRemainingToday({showtimes:[]},at('15:00'),at('12:00')),false,'Known empty schedule for today is hidden');
+assert.equal(hasRemainingToday(null,at('15:00'),at('12:00')),null,'Missing source is unknown');
+assert.equal(hasRemainingToday({},at('15:00'),at('12:00')),null);
+assert.equal(hasRemainingToday({showtimes:[{startTime:'bad'}]},at('15:00'),at('12:00')),null,'Malformed times are unknown');
+assert.equal(hasRemainingToday({showtimes:[slot('18:00')]},Date.parse('2026-10-06T10:00:00+02:00'),at('12:00')),null,'Yesterday does not suppress the new day');
+assert.equal(hasRemainingToday({showtimes:[{startTime:'2026-10-06T18:00:00+02:00'}]},Date.parse('2026-10-06T10:00:00+02:00'),at('12:00')),true,'New day automatically includes new performances');
+assert.equal(hasRemainingToday({showtimes:[{startTime:'2026-10-05T23:50:00+02:00',endTime:'2026-10-06T00:20:00+02:00'}]},Date.parse('2026-10-06T00:05:00+02:00'),Date.parse('2026-10-06T00:00:00+02:00')),true,'Running show may cross midnight');
+console.log('Passed: remaining/ongoing/finished shows, exact last-slot cutoff, known empty versus unknown/malformed source, stale same-day schedule, Paris rollover and next-day restoration.');
+
+const {canAttendToday}=require('../dist/show-times.js');
+const showAt18={showtimes:[slot('18:00','18:30')]};
+assert.equal(canAttendToday(showAt18,at('17:40'),at('12:00'),35),true,'Arrival at start plus fifteen minutes fits');
+assert.equal(canAttendToday(showAt18,at('17:40')+1,at('12:00'),35),false,'One millisecond after the arrival deadline is too late');
+assert.equal(canAttendToday(showAt18,at('17:40'),at('12:00'),36),false,'Longer walk misses the grace window');
+assert.equal(canAttendToday({showtimes:[slot('18:00'),slot('19:00')]},at('17:40'),at('12:00'),36),true,'A later performance can still fit');
+assert.equal(canAttendToday(showAt18,at('18:05'),at('12:00'),10),true,'A started show remains reachable during grace');
+assert.equal(canAttendToday(showAt18,at('18:05')+1,at('12:00'),10),false,'Walking time must fit the remaining grace');
+assert.equal(canAttendToday(showAt18,at('18:15'),at('12:00'),0),true);
+assert.equal(canAttendToday(showAt18,at('18:15')+1,at('12:00'),0),false);
+assert.equal(canAttendToday(showAt18,at('17:40'),at('12:00'),Infinity),false);
+assert.equal(canAttendToday(null,at('17:40'),at('12:00'),10),null,'Unknown schedule remains unknown');
+const cascade={showtimes:[slot('21:50','22:10')]};
+assert.equal(canAttendToday(cascade,at('21:48'),at('12:00'),6),true,'Cascade does not disappear before its 21:50 start');
+assert.equal(hasRemainingToday(cascade,at('22:05'),at('12:00')),true);
+assert.equal(hasRemainingToday(cascade,at('22:05')+1,at('12:00')),false);
+assert.equal(today(cascade,at('22:05')).length,1);
+assert.equal(today(cascade,at('22:05')+1).length,0,'Even a running show disappears after +15 minutes');
+console.log('Passed: fifteen-minute grace throughout schedules and walking eligibility, exact millisecond cutoffs, Cascade regression, later performances and midnight boundary.');

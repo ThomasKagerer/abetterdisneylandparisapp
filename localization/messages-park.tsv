@@ -1,0 +1,112 @@
+Wartezeit|Attente|Attesa|Espera|等候时间|待ち時間|대기 시간|وقت الانتظار
+Wartezeiten|Temps d’attente|Tempi di attesa|Tiempos de espera|等候时间|待ち時間|대기 시간|أوقات الانتظار
+Wartezeit anzeigen|Afficher l’attente|Mostra attesa|Mostrar espera|查看等候时间|待ち時間を見る|대기 시간 보기|عرض وقت الانتظار
+Wartezeiten aktualisieren|Actualiser les temps d’attente|Aggiorna tempi di attesa|Actualizar tiempos de espera|刷新等候时间|待ち時間を更新|대기 시간 새로고침|تحديث أوقات الانتظار
+Wartezeit nicht verfügbar|Temps d’attente indisponible|Tempo di attesa non disponibile|Tiempo de espera no disponible|等候时间暂无数据|待ち時間の情報なし|대기 시간 정보 없음|وقت الانتظار غير متاح
+Keine Wartezeiten|Aucun temps d’attente|Nessun tempo di attesa|Sin tiempos de espera|暂无等候数据|待ち時間の情報なし|대기 시간 정보 없음|لا توجد أوقات انتظار
+Geschlossen|Fermé|Chiuso|Cerrado|已关闭|休止中|운영 중단|مغلق
+Derzeit geschlossen|Actuellement fermé|Al momento chiuso|Cerrado actualmente|目前关闭|現在休止中|현재 운영 중단|مغلق حاليًا
+Normal: {0}|File classique : {0}|Coda standard: {0}|Cola normal: {0}|普通队列：{0}|スタンバイ：{0}|일반 대기: {0}|الطابور العادي: {0}
+Single Rider|Single Rider|Single Rider|Single Rider|单人通道|シングルライダー|싱글라이더|طابور الأفراد
+Single Rider: {0}|Single Rider : {0}|Single Rider: {0}|Single Rider: {0}|单人乘客队列：{0}|シングルライダー：{0}|싱글 라이더: {0}|طابور الأفراد: {0}
+Single Rider vorhanden|File Single Rider disponible|Coda Single Rider disponibile|Cola Single Rider disponible|提供单人乘客队列|シングルライダー対応|싱글 라이더 이용 가능|يتوفر طابور للأفراد
+{0} Min. Wartezeit|{0} min d’attente|{0} min di attesa|{0} min de espera|等候{0}分钟|待ち時間{0}分|대기 {0}분|انتظار {0} د
+{0} Min. zu Fuß|{0} min à pied|{0} min a piedi|{0} min a pie|步行{0}分钟|徒歩{0}分|도보 {0}분|{0} د سيرًا
+ca. {0} Min. zu Fuß|env. {0} min à pied|circa {0} min a piedi|aprox. {0} min a pie|步行约{0}分钟|徒歩約{0}分|도보 약 {0}분|حوالي {0} د سيرًا
+ca. {0} Min.|env. {0} min|circa {0} min|aprox. {0} min|约{0}分钟|約{0}分|약 {0}분|حوالي {0} د
+ca. {0} Min. zusätzlicher Fußweg|env. {0} min de marche en plus|circa {0} min a piedi in più|aprox. {0} min a pie adicionales|需额外步行约{0}分钟|追加の徒歩約{0}分|추가 도보 약 {0}분|حوالي {0} د مشي إضافية
+noch ca. {0} Min.|encore env. {0} min|ancora circa {0} min|quedan aprox. {0} min|预计还需{0}分钟|あと約{0}分|약 {0}분 남음|بقي نحو {0} د
+Min.|min|min|min|分钟|分|분|د
+Std.|h|h|h|小时|時間|시간|س
+Sek.|s|s|s|秒|秒|초|ث
+{0} Min. {1} Sek.|{0} min {1} s|{0} min {1} s|{0} min {1} s|{0}分钟{1}秒|{0}分{1}秒|{0}분 {1}초|{0} د {1} ث
+{0} Std. {1} Min. {2} Sek.|{0} h {1} min {2} s|{0} h {1} min {2} s|{0} h {1} min {2} s|{0}小时{1}分钟{2}秒|{0}時間{1}分{2}秒|{0}시간 {1}분 {2}초|{0} س {1} د {2} ث
+Check-in|Check-in|Check-in|Check-in|排队登记|チェックイン|체크인|تسجيل الانتظار
+Anstellen|Faire la queue|Mettersi in coda|Ponerse en la cola|开始排队|列に並ぶ|줄 서기|الانضمام إلى الطابور
+Check-in · Anstellen|Check-in · Faire la queue|Check-in · Mettiti in coda|Check-in · Ponerse en la cola|登记开始排队|チェックイン・列に並ぶ|체크인 · 줄 서기|تسجيل الدخول إلى الطابور
+Check-in starten|Démarrer le check-in|Avvia check-in|Iniciar check-in|开始排队登记|チェックインを開始|체크인 시작|بدء تسجيل الانتظار
+Beim Anstellen Check-in starten|Démarrez le check-in en entrant dans la file|Avvia il check-in quando entri in coda|Inicia el check-in al ponerte en la cola|进入队列后开始登记|列に並んだらチェックインを開始|줄을 설 때 체크인 시작|ابدأ التسجيل عند الانضمام إلى الطابور
+Check-in starten, sobald du in der Warteschlange stehst.|Démarrez le check-in une fois dans la file.|Avvia il check-in quando sei in coda.|Inicia el check-in cuando estés en la cola.|进入队列后，再开始排队登记。|待ち列に入ったらチェックインを開始してください。|대기 줄에 들어간 뒤 체크인을 시작하세요.|ابدأ تسجيل الانتظار عندما تكون في الطابور.
+Check-in gestartet|Check-in démarré|Check-in avviato|Check-in iniciado|已开始排队登记|チェックイン開始|체크인 시작됨|بدأ تسجيل الانتظار
+Wartezeit läuft.|Le chronomètre tourne.|Il timer è attivo.|El temporizador está en marcha.|正在记录等候时间。|待ち時間を計測中。|대기 시간 측정 중입니다.|جارٍ حساب وقت الانتظار.
+Du stehst noch an|Vous êtes toujours dans la file|Sei ancora in coda|Sigues en la cola|你仍在排队|まだ列に並んでいます|아직 줄을 서고 있어요|ما زلت في الطابور
+Du stehst hier an|Vous faites la queue ici|Sei in coda qui|Estás en esta cola|你在这里排队|ここで並んでいます|여기서 줄을 서고 있어요|أنت في هذا الطابور
+Eingestiegen|À bord|Salito a bordo|Ya he subido|已上车|乗りました|탑승 완료|تم الركوب
+Anstellen abbrechen|Arrêter le chronomètre|Interrompi attesa|Cancelar espera|结束排队|待ち時間の計測を中止|대기 취소|إلغاء الانتظار
+Wartezeit am Eingang (Minuten)|Attente affichée à l’entrée (minutes)|Attesa indicata all’ingresso (minuti)|Espera indicada en la entrada (minutos)|入口显示的等候时间（分钟）|入口に表示された待ち時間（分）|입구에 표시된 대기 시간(분)|وقت الانتظار المعلن عند المدخل بالدقائق
+Aktuelle Wartezeit übernommen. Du kannst die Anzeige am Eingang eintragen.|L’attente actuelle est préremplie. Vous pouvez saisir celle affichée à l’entrée.|L’attesa attuale è già inserita. Puoi correggerla con quella indicata all’ingresso.|Se ha rellenado la espera actual. Puedes introducir la indicada en la entrada.|已填入当前等候时间，也可改为入口显示的时间。|現在の待ち時間を入力済みです。入口の表示に合わせて変更できます。|현재 대기 시간이 입력되어 있어요. 입구에 표시된 시간으로 수정할 수 있어요.|تم إدخال وقت الانتظار الحالي. يمكنك تعديله حسب الوقت المعلن عند المدخل.
+Keine aktuelle Wartezeit verfügbar. Optional die Minuten vom Eingang eintragen.|Pas d’attente actuelle disponible. Vous pouvez saisir les minutes affichées à l’entrée.|Attesa attuale non disponibile. Puoi inserire i minuti indicati all’ingresso.|No hay espera actual disponible. Puedes introducir los minutos de la entrada.|暂无当前等候时间，可自行填写入口显示的分钟数。|現在の待ち時間は不明です。入口の表示を任意で入力できます。|현재 대기 시간 정보가 없어요. 입구에 표시된 시간을 입력할 수 있어요.|وقت الانتظار الحالي غير متاح. يمكنك إدخال الدقائق المعلنة عند المدخل.
+Gewartet: {0}|Attente écoulée : {0}|Attesa trascorsa: {0}|Tiempo esperado: {0}|已等候：{0}|経過時間：{0}|기다린 시간: {0}|الانتظار المنقضي: {0}
+Tatsächlich gewartet: {0}|Attente réelle : {0}|Attesa effettiva: {0}|Espera real: {0}|实际等候：{0}|実際の待ち時間：{0}|실제 대기 시간: {0}|وقت الانتظار الفعلي: {0}
+Restzeit unbekannt|Temps restant inconnu|Tempo rimanente sconosciuto|Tiempo restante desconocido|剩余时间未知|残り時間は不明|남은 시간 알 수 없음|الوقت المتبقي غير معروف
+Meine Wartezeit anzeigen|Afficher mon attente|Mostra la mia attesa|Mostrar mi espera|查看我的等候时间|自分の待ち時間を見る|내 대기 시간 보기|عرض وقت انتظاري
+Laufende Anstehzeit|Attente en cours|Attesa in corso|Espera en curso|正在进行的排队|現在の待ち時間|현재 대기 시간|وقت الانتظار الجاري
+Stehst du hier an?|Faites-vous la queue ici ?|Sei in coda qui?|¿Estás en esta cola?|你正在这里排队吗？|ここで並んでいますか？|여기서 줄을 서고 있나요?|هل تنتظر في هذا الطابور؟
+Check-in bei {0}?|Faire un check-in pour {0} ?|Fare il check-in per {0}?|¿Hacer check-in en {0}?|要为{0}开始排队登记吗？|{0}にチェックインしますか？|{0}에 체크인할까요?|هل تريد تسجيل الانتظار عند {0}؟
+Eine Wartezeit läuft bereits. Erst beenden oder abbrechen.|Un chronomètre est déjà actif. Terminez-le ou annulez-le d’abord.|Un timer è già attivo. Prima terminalo o annullalo.|Ya hay un temporizador activo. Termínalo o cancélalo primero.|已有排队计时正在进行，请先完成或取消。|別の待ち時間を計測中です。先に終了または中止してください。|이미 대기 시간을 측정 중이에요. 먼저 완료하거나 취소하세요.|يوجد انتظار جارٍ بالفعل. أنهه أو ألغِه أولًا.
+Bitte eine Wartezeit von 0 bis 600 Minuten eingeben.|Saisissez une attente entre 0 et 600 minutes.|Inserisci un’attesa da 0 a 600 minuti.|Introduce una espera de 0 a 600 minutos.|请输入0至600分钟的等候时间。|0〜600分の待ち時間を入力してください。|0~600분 사이의 대기 시간을 입력하세요.|أدخل وقت انتظار بين 0 و600 دقيقة.
+Geschätzte Restzeit ab Check-in. Die Schlange kann schneller oder langsamer werden. Der Timer bleibt beim Schließen der App erhalten.|Temps restant estimé depuis le check-in. La file peut avancer plus ou moins vite. Le chronomètre est conservé lorsque l’app est fermée.|Tempo rimanente stimato dal check-in. La coda può avanzare più o meno rapidamente. Il timer resta attivo anche chiudendo l’app.|Tiempo restante estimado desde el check-in. La cola puede avanzar más rápido o más despacio. El temporizador se conserva al cerrar la app.|剩余时间根据登记时的预计等候时间计算，队列可能快于或慢于预计。关闭应用后，计时仍会保留。|チェックイン時点からの推定残り時間です。列の進む速さは変わることがあります。アプリを閉じてもタイマーは保存されます。|체크인 시점을 기준으로 남은 시간을 추정해요. 줄이 예상보다 빠르거나 느리게 움직일 수 있어요. 앱을 닫아도 타이머는 유지돼요.|الوقت المتبقي تقديري منذ التسجيل. قد يتحرك الطابور أسرع أو أبطأ. يُحفظ المؤقت عند إغلاق التطبيق.
+Meine Anstehzeit pro Tag|Mon attente totale par jour|La mia attesa totale per giorno|Mi espera total por día|每天的总排队时间|一日ごとの合計待ち時間|날짜별 총 대기 시간|إجمالي وقت انتظاري يوميًا
+Noch keine Anstehzeiten erfasst. Starte beim Anstellen einen Check-in.|Aucune attente enregistrée. Démarrez un check-in en entrant dans une file.|Nessuna attesa registrata. Avvia un check-in quando ti metti in coda.|Aún no hay esperas registradas. Inicia un check-in al entrar en una cola.|尚未记录排队时间。进入队列后可开始登记。|待ち時間はまだ記録されていません。列に並んだらチェックインしてください。|아직 기록된 대기 시간이 없어요. 줄을 설 때 체크인을 시작하세요.|لم تُسجّل أوقات انتظار بعد. ابدأ التسجيل عند الانضمام إلى طابور.
+Tatsächlich gemessene Check-ins, einschließlich abgebrochener Wartezeiten. Laufende Zeit zählt mit. Tagesgrenzen: Ortszeit Paris. Auf diesem Gerät gespeichert.|Attentes mesurées lors des check-ins, même annulés. L’attente en cours est incluse. Les jours suivent l’heure de Paris. Données stockées sur cet appareil.|Attese misurate con i check-in, anche annullati. È inclusa l’attesa in corso. I giorni seguono l’ora di Parigi. Dati salvati su questo dispositivo.|Esperas medidas con los check-ins, incluidas las canceladas y la espera en curso. Los días siguen la hora de París. Datos guardados en este dispositivo.|统计登记后实际测得的等候时间，包括中途取消及正在进行的排队。日期按巴黎当地时间划分，数据保存在本设备上。|チェックインで測定した実際の待ち時間です。中止した待ち時間と現在の待ち時間も含みます。日付はパリ時間で区切り、この端末に保存します。|체크인으로 측정한 실제 대기 시간이에요. 취소한 대기와 현재 진행 중인 시간도 포함돼요. 날짜는 파리 현지 시간 기준이며 이 기기에 저장돼요.|أوقات انتظار مقاسة فعليًا، تشمل الانتظار الملغى والجاري. تُحسب الأيام بتوقيت باريس المحلي، وتُحفظ البيانات على هذا الجهاز.
+WC-Pause|Pause toilettes|Pausa toilette|Parada para ir al aseo|洗手间休息|トイレ休憩|화장실 휴식|استراحة لدورة المياه
+WC-Pause einschieben|Ajouter une pause toilettes|Aggiungi pausa toilette|Añadir parada al aseo|插入洗手间休息|トイレ休憩を追加|화장실 휴식 추가|إضافة استراحة لدورة المياه
+Trinkwasser suchen|Chercher de l’eau potable|Cerca acqua potabile|Buscar agua potable|寻找饮水点|給水スポットを探す|식수대 찾기|البحث عن مياه الشرب
+Restaurant suchen|Chercher un restaurant|Cerca un ristorante|Buscar restaurante|寻找餐厅|レストランを探す|레스토랑 찾기|البحث عن مطعم
+Pause erledigt|Pause terminée|Pausa finita|Parada terminada|休息完成|休憩終了|휴식 완료|انتهت الاستراحة
+Pause entfernen|Retirer la pause|Rimuovi pausa|Quitar parada|移除休息地点|休憩を削除|휴식 삭제|إزالة الاستراحة
+Pause entfernt.|Pause retirée.|Pausa rimossa.|Parada eliminada.|已移除休息地点。|休憩を削除しました。|휴식을 삭제했어요.|تمت إزالة الاستراحة.
+Wohin danach?|Où aller ensuite ?|Dove andare dopo?|¿Adónde ir después?|之后去哪里？|その後はどこへ？|그다음은 어디로 갈까요?|إلى أين بعد ذلك؟
+Bisheriges Ziel|Destination précédente|Destinazione precedente|Destino anterior|原目的地|元の目的地|기존 목적지|الوجهة السابقة
+Bisheriges Ziel behalten|Garder la destination précédente|Mantieni destinazione precedente|Mantener destino anterior|保留原目的地|元の目的地を維持|기존 목적지 유지|الإبقاء على الوجهة السابقة
+Nach der Pause den nächstgelegenen Ride wählen|Après la pause, choisir l’attraction la plus proche|Dopo la pausa, scegli l’attrazione più vicina|Tras la parada, elegir la atracción más cercana|休息后前往最近的游乐项目|休憩後は最寄りのアトラクションへ|휴식 후 가장 가까운 어트랙션 선택|بعد الاستراحة، اختر أقرب لعبة
+nach der Pause|après la pause|dopo la pausa|después de la parada|休息之后|休憩後|휴식 후|بعد الاستراحة
+nach der WC-Pause|après la pause toilettes|dopo la pausa toilette|después de la parada al aseo|洗手间休息之后|トイレ休憩後|화장실 휴식 후|بعد استراحة دورة المياه
+Nächster Ride nach der WC-Pause|Prochaine attraction après les toilettes|Prossima attrazione dopo la toilette|Próxima atracción tras ir al aseo|洗手间休息后的下一个项目|トイレ休憩後の次のアトラクション|화장실 휴식 후 다음 어트랙션|اللعبة التالية بعد استراحة دورة المياه
+Aktuelle Shows in der Nähe|Spectacles à proximité|Spettacoli nelle vicinanze|Espectáculos cercanos|附近的演出|近くのショー|주변 공연|العروض القريبة
+In der Nähe|À proximité|Nelle vicinanze|Cerca de ti|附近|近く|주변|بالقرب منك
+Alle Shows heute|Tous les spectacles du jour|Tutti gli spettacoli di oggi|Todos los espectáculos de hoy|今天的所有演出|今日のすべてのショー|오늘의 모든 공연|كل عروض اليوم
+Alle heute|Tous aujourd’hui|Tutti oggi|Todos hoy|今天全部|今日のすべて|오늘 전체|اليوم كله
+Spielzeiten heute|Horaires du jour|Orari di oggi|Horarios de hoy|今日演出时间|今日の公演時間|오늘의 공연 시간|مواعيد عروض اليوم
+Nächste erreichbare Vorstellungen|Prochaines séances accessibles à temps|Prossimi spettacoli raggiungibili in tempo|Próximas sesiones a las que puedes llegar|接下来可及时赶到的场次|これから間に合う公演|지금부터 갈 수 있는 공연|العروض القادمة التي يمكنك اللحاق بها
+Nächste Show|Spectacle suivant|Prossimo spettacolo|Próximo espectáculo|下一场演出|次のショー|다음 공연|العرض التالي
+Vorherige Show|Spectacle précédent|Spettacolo precedente|Espectáculo anterior|上一场演出|前のショー|이전 공연|العرض السابق
+Show-Auswahl|Choix du spectacle|Scelta spettacolo|Selección de espectáculo|演出选择|ショーを選ぶ|공연 선택|اختيار العرض
+Heute|Aujourd’hui|Oggi|Hoy|今天|今日|오늘|اليوم
+Heute {0}|Aujourd’hui à {0}|Oggi alle {0}|Hoy a las {0}|今天{0}|今日{0}|오늘 {0}|اليوم {0}
+Beginnt jetzt|Commence maintenant|Inizia ora|Empieza ahora|现在开始|まもなく開始|지금 시작|يبدأ الآن
+in {0} Min.|dans {0} min|tra {0} min|en {0} min|{0}分钟后|{0}分後|{0}분 후|بعد {0} د
+Beginn vor {0} Min.|a commencé il y a {0} min|iniziato {0} min fa|empezó hace {0} min|已开始{0}分钟|{0}分前に開始|{0}분 전에 시작|بدأ قبل {0} د
+Läuft gerade|En cours|In corso|En curso|正在演出|上演中|공연 중|جارٍ الآن
+Läuft seit {0}|En cours depuis {0}|In corso dalle {0}|En curso desde las {0}|自{0}开始演出|{0}から上演中|{0}부터 공연 중|جارٍ منذ {0}
+Nächste Show: {0}|Prochaine séance : {0}|Prossimo spettacolo: {0}|Próxima sesión: {0}|下一场：{0}|次の公演：{0}|다음 공연: {0}|العرض التالي: {0}
+Vorstellung um {0} Uhr|Séance à {0}|Spettacolo alle {0}|Sesión a las {0}|演出时间：{0}|公演時間：{0}|공연 시간: {0}|العرض الساعة {0}
+Spätestens {0} da sein|Arrivez au plus tard à {0}|Arriva entro le {0}|Llega como muy tarde a las {0}|最迟请于{0}到达|{0}までに到着してください|늦어도 {0}까지 도착하세요|احضر في موعد أقصاه {0}
+Indoor|En intérieur|Al coperto|En interior|室内|屋内|실내|داخلي
+Outdoor|En extérieur|All’aperto|Al aire libre|室外|屋外|야외|خارجي
+Im Freien|En extérieur|All’aperto|Al aire libre|室外|屋外|야외|في الهواء الطلق
+10 Min. vorher da sein|Arrivez 10 min avant|Arriva 10 min prima|Llega 10 min antes|请提前10分钟到达|10分前に到着してください|10분 전에 도착하세요|احضر قبل 10 دقائق
+Mindestens 10 Min. vor Beginn da sein|Arrivez au moins 10 min avant le début|Arriva almeno 10 min prima dell’inizio|Llega al menos 10 min antes del inicio|请至少提前10分钟到达|開始の10分前までに到着してください|시작 최소 10분 전에 도착하세요|احضر قبل بدء العرض بـ10 دقائق على الأقل
+{0} / {1} Shows in der Nähe|{0} / {1} spectacles à proximité|{0} / {1} spettacoli nelle vicinanze|{0} / {1} espectáculos cercanos|附近演出{0}／{1}|近くのショー{0}／{1}|주변 공연 {0}/{1}|العرض {0} من {1} عروض قريبة
+Keine weiteren Shows in der Nähe|Aucun autre spectacle à proximité|Nessun altro spettacolo nelle vicinanze|No hay más espectáculos cercanos|附近没有其他演出|近くに他のショーはありません|주변에 다른 공연이 없어요|لا توجد عروض أخرى قريبة
+Heute keine erreichbare Vorstellung|Aucune séance accessible à temps aujourd’hui|Nessuno spettacolo raggiungibile in tempo oggi|No puedes llegar a más sesiones hoy|今天没有可及时赶到的场次|今日は間に合う公演がありません|오늘 갈 수 있는 공연이 없어요|لا توجد عروض يمكنك اللحاق بها اليوم
+Heute keine bestätigte erreichbare Vorstellung|Aucune séance accessible à temps confirmée aujourd’hui|Nessuno spettacolo confermato raggiungibile oggi|No hay sesiones confirmadas a las que puedas llegar hoy|今天没有已确认且可及时赶到的场次|今日は間に合う公演が確認できません|오늘 갈 수 있는 확정 공연이 없어요|لا توجد عروض مؤكدة يمكنك اللحاق بها اليوم
+Heute keine weitere Show bestätigt|Aucune autre séance confirmée aujourd’hui|Nessun altro spettacolo confermato oggi|No hay más sesiones confirmadas hoy|今天暂无更多已确认场次|今日のこれ以降の公演は未確認です|오늘 남은 확정 공연이 없어요|لا توجد عروض أخرى مؤكدة اليوم
+Heute nicht mehr rechtzeitig erreichbar|Il est trop tard pour arriver à temps aujourd’hui|Non raggiungibile in tempo oggi|Ya no llegas a tiempo hoy|今天已无法及时赶到|今日はもう間に合いません|오늘은 더 이상 제시간에 도착할 수 없어요|لا يمكن اللحاق به في الوقت المناسب اليوم
+Heute beendet|Terminé pour aujourd’hui|Terminato per oggi|Terminado por hoy|今天已结束|本日の公演終了|오늘 공연 종료|انتهى اليوم
+Spielzeiten noch nicht bestätigt|Horaires non encore confirmés|Orari non ancora confermati|Horarios aún sin confirmar|演出时间尚未确认|公演時間は未確認です|공연 시간 미확정|المواعيد غير مؤكدة بعد
+Spielzeiten derzeit nicht aktuell bestätigt.|Les horaires ne sont pas confirmés à jour.|Gli orari non sono attualmente confermati come aggiornati.|No se ha confirmado que los horarios estén actualizados.|目前无法确认演出时间是否为最新。|公演時間が最新か確認できていません。|공연 시간이 최신인지 확인되지 않았어요.|لم يُؤكد أن مواعيد العروض محدثة حاليًا.
+Keine Spielzeiten für heute veröffentlicht.|Aucun horaire publié pour aujourd’hui.|Nessun orario pubblicato per oggi.|No hay horarios publicados para hoy.|尚未公布今天的演出时间。|今日の公演時間は公開されていません。|오늘의 공연 시간이 공개되지 않았어요.|لم تُنشر مواعيد عروض اليوم.
+Show derzeit geschlossen|Spectacle actuellement indisponible|Spettacolo attualmente sospeso|Espectáculo suspendido actualmente|演出目前暂停|現在ショーは休止中|현재 공연 중단|العرض متوقف حاليًا
+Keine erreichbaren Vorstellungen für heute bestätigt.|Aucune séance accessible à temps confirmée pour aujourd’hui.|Nessuno spettacolo raggiungibile in tempo confermato per oggi.|No hay sesiones confirmadas a las que puedas llegar hoy.|今天没有已确认且可及时赶到的演出场次。|今日は間に合う公演が確認できません。|오늘 갈 수 있는 확정 공연이 없어요.|لا توجد عروض مؤكدة يمكنك اللحاق بها اليوم.
+Keine erreichbaren Vorstellungen bestätigt. Standort freigeben, um Entfernungen zu sehen.|Aucune séance accessible confirmée. Autorisez la localisation pour voir les distances.|Nessuno spettacolo raggiungibile confermato. Consenti la posizione per vedere le distanze.|No hay sesiones accesibles confirmadas. Permite la ubicación para ver las distancias.|暂无可赶到的已确认演出。启用定位后可查看距离。|間に合う公演は確認できません。距離を見るには位置情報を許可してください。|갈 수 있는 확정 공연이 없어요. 거리를 보려면 위치 정보를 허용하세요.|لا توجد عروض مؤكدة يمكن اللحاق بها. فعّل الموقع لعرض المسافات.
+Bis 800 m Fußweg|À 800 m de marche maximum|Entro 800 m a piedi|A un máximo de 800 m a pie|步行距离不超过800米|徒歩800m以内|도보 800m 이내|على مسافة مشي لا تزيد عن 800 م
+Beginn innerhalb von 45 Minuten. Einlass vor Ort prüfen.|Début dans les 45 min. Vérifiez l’accès sur place.|Inizio entro 45 minuti. Verifica l’ingresso sul posto.|Comienza en los próximos 45 minutos. Comprueba el acceso allí.|将在45分钟内开始，请现场确认入场安排。|45分以内に開始します。入場については現地で確認してください。|45분 이내에 시작해요. 입장은 현장에서 확인하세요.|يبدأ خلال 45 دقيقة. تحقّق من الدخول في الموقع.
+Nach Entfernung sortiert.|Triés par distance.|Ordinati per distanza.|Ordenados por distancia.|按距离排序。|距離順。|거리순.|مرتّبة حسب المسافة.
+Nach Entfernung, dann Startzeit sortiert|Triés par distance, puis par horaire|Ordinati per distanza, poi per orario|Ordenados por distancia y luego por hora|先按距离、再按开始时间排序|距離順、次に開始時刻順|거리순, 그다음 시작 시간순|مرتّبة حسب المسافة ثم موعد البدء
+Jede Show einmal mit der nächsten erreichbaren Vorstellung heute. Einlass und Plätze vor Ort prüfen.|Chaque spectacle apparaît une seule fois, avec la prochaine séance accessible à temps aujourd’hui. Vérifiez l’accès et les places sur place.|Ogni spettacolo compare una volta, con la prossima sessione raggiungibile oggi. Verifica accesso e posti sul posto.|Cada espectáculo aparece una vez, con la próxima sesión a la que puedas llegar hoy. Comprueba acceso y plazas allí.|每个演出只显示一次，列出今天下一场可及时赶到的场次。入场及座位情况请现场确认。|ショーごとに、今日これから間に合う次の公演を一度だけ表示します。入場や空席は現地で確認してください。|각 공연은 오늘 갈 수 있는 다음 회차로 한 번만 표시돼요. 입장과 좌석은 현장에서 확인하세요.|يظهر كل عرض مرة واحدة مع أقرب موعد يمكنك اللحاق به اليوم. تحقّق من الدخول والمقاعد في الموقع.
+Alle bestätigten Shows heute|Tous les spectacles confirmés aujourd’hui|Tutti gli spettacoli confermati oggi|Todos los espectáculos confirmados hoy|今天所有已确认的演出|今日の確定しているショー|오늘 확정된 모든 공연|كل عروض اليوم المؤكدة
+Reservierung in der Disney-App erforderlich|Réservation nécessaire dans l’app Disney|Prenotazione richiesta nell’app Disney|Reserva necesaria en la app Disney|需在迪士尼应用中预约|ディズニーアプリでの予約が必要です|디즈니 앱에서 예약 필요|يلزم الحجز عبر تطبيق ديزني
+In der Disney-App erforderlich|À faire dans l’app Disney|Da effettuare nell’app Disney|Debe hacerse en la app Disney|需在迪士尼应用中操作|ディズニーアプリで必要です|디즈니 앱에서 필요|مطلوب في تطبيق ديزني
+Über diese Show|À propos de ce spectacle|Informazioni sullo spettacolo|Sobre este espectáculo|关于这个演出|このショーについて|이 공연 소개|عن هذا العرض
+Das erwartet dich|Ce qui vous attend|Cosa ti aspetta|Qué te espera|项目介绍|楽しめること|이런 경험을 할 수 있어요|ما ينتظرك

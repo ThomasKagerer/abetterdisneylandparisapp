@@ -1,0 +1,24 @@
+{
+  "url": "https://data.geopf.fr/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=normal&FORMAT=image%2Fjpeg&CRS=EPSG%3A3857&BBOX=308132.3505157812%2C6251562.643998097%2C310080.4416046635%2C6254016.579648796&WIDTH=2048&HEIGHT=2048",
+  "bounds": [
+    2.768,
+    48.8625,
+    2.7855,
+    48.877
+  ],
+  "mercatorBounds": [
+    308132.3505157812,
+    6251562.643998097,
+    310080.4416046635,
+    6254016.579648796
+  ],
+  "width": 2048,
+  "height": 2048,
+  "source": "IGN BD ORTHO",
+  "imageYear": 2024,
+  "retrievedAt": "2026-10-06",
+  "license": "Licence Ouverte Etalab 2.0",
+  "licenseUrl": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+  "sourceUrl": "https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO",
+  "datesUrl": "https://data.geopf.fr/annexes/ressources/fiches/photographies-aeriennes-RVB/geoportail_dates_des_prises_de_vues_aeriennes-RVB.pdf"
+}

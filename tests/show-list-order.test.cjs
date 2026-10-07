@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const DisneyShows=require('../dist/show-times.js'),source=fs.readFileSync(__dirname+'/../dist/app.js','utf8');
+let now=Date.parse('2026-10-06T13:37:00+02:00');
+const show=(start,end,status='OPERATING')=>({status,showtimes:[{startTime:start,endTime:end}]});
+const stamp=mins=>new Date(now+mins*60000).toISOString();
+assert(DisneyShows.startsSoon(show(stamp(30),stamp(50)),now));
+assert(!DisneyShows.startsSoon(show(stamp(30),stamp(50)),now-1));
+assert(DisneyShows.startsSoon(show(stamp(-40),stamp(5)),now),'An explicitly still-running show is current');
+assert(!DisneyShows.startsSoon(show(stamp(-40),stamp(0)),now),'A finished show is no longer current');
+assert(DisneyShows.startsSoon(show(stamp(-10)),now),'Missing end retains the existing 15 minute grace');
+assert(!DisneyShows.startsSoon(show(stamp(-16)),now));
+assert(!DisneyShows.startsSoon(show(stamp(5),stamp(20),'CLOSED'),now));
+for(const payload of [null,{},show('bad','bad'),show('2026-10-07T13:00:00+02:00')])assert(!DisneyShows.startsSoon(payload,now));
+const ride={id:'ride',name:'Z Ride'},closed={id:'closed',name:'A Closed'},late={id:'late',name:'B Cascade of Lights',category:'show',themeparksId:'late'},soon={id:'soon',name:'C Show',category:'show',themeparksId:'soon'};
+const distances=new Map([['ride',400],['closed',0],['late',1],['soon',200]]);
+const ctx={Date:class extends Date{static now(){return now;}},DisneyShows,shows:new Map([['late',show(stamp(60),stamp(80))],['soon',show(stamp(20),stamp(40))]]),targetAvailable:r=>r!==closed,DisneyRatings:{get:r=>({score:r===late?5:3})}};
+vm.createContext(require('./helpers/near-park.cjs')(ctx));vm.runInContext(source.slice(source.indexOf('function sortRides('),source.indexOf('let lastRideDistancePaint=')),ctx);
+for(const mode of ['distance','name','rating']){const result=Array.from(ctx.sortRides([closed,late,ride,soon],mode,distances),r=>r.id);assert.equal(result.at(-1),'closed');assert.equal(result.at(-2),'late');assert(result.indexOf('soon')<result.indexOf('late'));}
+assert.deepEqual(Array.from(ctx.sortRides([late,ride,soon], 'distance',distances),r=>r.id),['soon','ride','late']);
+now+=30*60000;
+assert.deepEqual(Array.from(ctx.sortRides([late,ride,soon], 'distance',distances),r=>r.id),['late','soon','ride'],'Show moves up at exactly 30 minutes before start');
+console.log('Passed: current/30-minute shows first, later shows last with existing sorting and closed rides preserved; exact threshold, running/end, missing/invalid/other-day schedules.');

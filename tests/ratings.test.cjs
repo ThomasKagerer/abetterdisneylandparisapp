@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const Ratings=require('../dist/ratings.js'),data=JSON.parse(fs.readFileSync(__dirname+'/../dist/park-data.json'));
+const ranked=Ratings.ranked(data.rides),all=Ratings.ranked(data.rides,true);
+assert.equal(Object.keys(Ratings.entries).length,39);
+for(const id of Object.keys(Ratings.entries))assert(data.rides.some(r=>r.id===id),'Unmapped rating '+id);
+assert.equal(ranked[0].id,'ride-1469626867');
+assert(ranked.every(r=>Ratings.get(r).count>=10));assert(all.length>ranked.length);
+assert(all.some(r=>r.id==='ride-14211776384'));assert(!ranked.some(r=>r.id==='ride-14211776384'));
+for(let i=1;i<ranked.length;i++)assert(Ratings.get(ranked[i-1]).score>=Ratings.get(ranked[i]).score);
+assert.equal(Ratings.get({id:'ride-1469626867',category:'show'}),null);
+assert.equal(Ratings.get({id:'ride-unknown',category:'attraction'}),null);
+console.log('Passed: known catalog IDs, score ordering, review-count filtering, absent ratings excluded.');

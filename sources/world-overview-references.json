@@ -1,0 +1,8 @@
+{
+  "land": "https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/",
+  "landLicense": "Public domain",
+  "paris": "https://geo.api.gouv.fr/communes/75056?fields=contour&format=geojson&geometry=contour",
+  "parisLicense": "Licence Ouverte 2.0",
+  "retrieved": "2026-10-07",
+  "scope": "3D only. Simplified land and Paris outline; no city models, imagery, borders or transport simulation."
+}

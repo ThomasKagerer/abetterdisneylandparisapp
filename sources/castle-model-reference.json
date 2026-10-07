@@ -1,0 +1,17 @@
+{
+  "model": "Sleeping Beauty Castle",
+  "reviewed": "2026-10-06",
+  "sources": [
+    {
+      "url": "https://news.disneylandparis.com/en/chateau-renovation/",
+      "used": "Official photos, pink walls, blue roofs, gold tips, published height 43 m"
+    },
+    {
+      "url": "https://fans.disneylandparis.com/en/guests-at-disneyland-paris-can-once-again-brave-the-dingy-dungeon-under-sleeping-beauty-castle/",
+      "used": "Dragon under the castle"
+    }
+  ],
+  "geometry": "Decorative interpretation; not an architectural survey. Dragon at western foot is an illustrative exterior reference to the underground lair. Original entrance coordinates remain unchanged.",
+  "castleRoofText": false,
+  "heightMeters": 43
+}

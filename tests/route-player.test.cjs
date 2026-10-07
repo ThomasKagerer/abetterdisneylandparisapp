@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const s=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),classes=new Set(['map-home']);
+const ctx={route:{order:['ride-test']},nav:false,playerDismissed:false,document:{body:{classList:{contains:k=>classes.has(k)}}}};
+vm.createContext(require('./helpers/near-park.cjs')(ctx));vm.runInContext(s.slice(s.indexOf('function playerVisible('),s.indexOf('function enterNav(')),ctx);
+assert.equal(ctx.playerVisible(),true,'a calculated route has a destination player even before live navigation');
+classes.add('functions-open');assert.equal(ctx.playerVisible(),false,'tab pages remain readable');classes.delete('functions-open');assert.equal(ctx.playerVisible(),true,'returning to map restores player');
+ctx.nav=true;assert.equal(ctx.playerVisible(),true);ctx.playerDismissed=true;assert.equal(ctx.playerVisible(),false);ctx.playerDismissed=false;ctx.route.order=[];assert.equal(ctx.playerVisible(),false);
+console.log('Passed: route preview and live player, tab return, explicit dismissal and empty route.');
+const stopped=new Map(),els=new Map(),stopCtx={playerDismissed:false,nav:true,gpsWantNav:true,following:true,generation:5,planning:true,route:{order:['ride-test']},routeOrigin:[1,2],pinnedWC:{id:'wc-1'},userKey:'test',localStorage:{setItem:(k,v)=>stopped.set(k,v)},setHeadingUp:v=>stopCtx.heading=v,renderFollow(){},lineLayer:{clearLayers(){stopCtx.cleared=true;}},data:{},renderRoute(){},renderPins(){},document:{body:{classList:{remove(){}}},fullscreenElement:null},$:(id)=>{if(!els.has(id))els.set(id,{});return els.get(id);},wakeLock:null,map:{invalidateSize(){}}};
+vm.createContext(require('./helpers/near-park.cjs')(stopCtx));vm.runInContext(s.slice(s.indexOf('function exitNav('),s.indexOf('function renderNav(')),stopCtx);stopCtx.exitNav();assert.equal(stopCtx.nav,false);assert.equal(stopCtx.following,false);assert.equal(stopCtx.heading,false);assert.equal(stopCtx.route,null);assert.equal(stopCtx.pinnedWC,null);assert.equal(stopCtx.generation,6);assert.equal(stopCtx.planning,false);assert.equal(stopCtx.cleared,true);assert.equal(stopped.get('test:navigation-stopped'),'true');assert.equal(els.get('navigation').hidden,true);
+console.log('Passed: close ends route, following, heading and pending calculation; remembers explicit stop.');

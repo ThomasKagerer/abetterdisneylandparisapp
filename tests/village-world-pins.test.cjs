@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),M=require('../dist/park-models.js'),C=require('../dist/map-3d.js'),scene=require('../dist/park-scene.json'),park=require('../dist/park-data.json');
+const village=scene.village,balloon=scene.landmarks.find(l=>l.kind==='balloon');assert(village&&balloon);assert.equal(balloon.sourceId,'way253840775');assert.equal(balloon.diameter,22.5);assert(balloon.basketHeight>0&&balloon.basketHeight<=balloon.maxFlightHeight);
+assert(Math.abs(balloon.latlng[0]-48.869014)<.00001&&Math.abs(balloon.latlng[1]-2.787114)<.00001);
+assert.equal(scene.features.features.find(f=>f.id===balloon.sourceId).properties.customModel,true,'Mooring polygon must not become a solid building hiding the balloon');
+assert(scene.features.features.some(f=>f.id==='way188316843'&&f.properties.kind==='village-ground'));
+assert(scene.features.features.filter(f=>f.properties.kind==='village-path').length>20);assert(scene.features.features.some(f=>f.id==='way78595866'),'Lakeside Village buildings must be included');
+for(const compact of [false,true]){const mesh=M.build({landmarks:[balloon],modelDetail:compact?'compact':'full'},[]);assert(mesh.every(Number.isFinite));let lo=Infinity,hi=-Infinity;for(let i=2;i<mesh.length;i+=6){lo=Math.min(lo,mesh[i]);hi=Math.max(hi,mesh[i]);}assert(lo<1);assert(Math.abs(hi-115)<.05);assert(mesh.byteLength<(compact?100000:200000));}
+for(const count of [600,180])assert(M.build(C.modelScene(scene,count),[]).byteLength<(count===600?5.3:4)*1048576);
+const destinations=C.destinationPlaces(scene),world=destinations.filter(p=>p.world);assert.equal(world.length,6);assert.equal(new Set(world.map(p=>p.id)).size,6);assert(world.every(p=>p.coordinates.every(Number.isFinite)&&p.source.startsWith('https://www.openstreetmap.org/')));assert(destinations.some(p=>p.name==='Disneyland Park'));assert(destinations.some(p=>p.name==='Disney Village'));
+const paris=world.find(p=>p.id==='paris'),tokyo=world.find(p=>p.id==='tokyo');assert(C.destinationVisible(paris,0,{lat:45,lng:2}));assert(!C.destinationVisible(tokyo,0,{lat:45,lng:2}),'Mickey pins on the back of the globe must not float in front');assert(C.destinationVisible(tokyo,3,{lat:35,lng:139}));assert(!C.destinationVisible(paris,18,{lat:48.87,lng:2.77}),'Detailed Paris view replaces the global resort pin with local park labels');assert.equal((C.mickeyIcon.match(/<circle/g)||[]).length,3);
+assert.equal(park.rides.length,95);assert.equal(scene.features.features.filter(f=>f.properties.kind==='path').length,park.paths.length,'Scenery paths do not silently change pedestrian routing');
+for(const id of ['paris','california','florida','tokyo','hong-kong','shanghai'])assert(world.some(p=>p.id===id));
+assert.equal(scene.regionalRail.lengthMeters,34215);assert(scene.worldOverview.land.features.length>100);
+console.log('Passed: surveyed Village/mooring, compact elevated balloon/gondola/tether, scenery-only paths, six Mickey destinations and globe-side visibility.');

@@ -1,0 +1,2112 @@
+{
+  "date": "2026-10-06",
+  "method": "Official Disney venue and catalogue + local OpenStreetMap geometry. No guessed exact meeting points. All pins remain walking graph endpoints.",
+  "destinations": [
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-a-celebration-in-arendelle",
+      "name": "A Celebration in Arendelle",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Arendelle Bay; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/a-celebration-in-arendelle",
+      "osm": {
+        "type": "node",
+        "id": 13444981711
+      },
+      "node": 7393,
+      "before": [
+        48.8687316,
+        2.7818219
+      ],
+      "after": [
+        48.8646988,
+        2.7734161
+      ],
+      "movedMeters": 761.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-animation-academy",
+      "name": "Animation Academy",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Animation Academy; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/animation-academy",
+      "osm": {
+        "type": "node",
+        "id": 12593786582
+      },
+      "node": 9014,
+      "before": [
+        48.8676058,
+        2.7786603
+      ],
+      "after": [
+        48.867578,
+        2.7782943
+      ],
+      "movedMeters": 27.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1271516009",
+      "name": "Avengers Assemble: Flight Force",
+      "status": "reviewed-queue",
+      "evidence": "Public approach outside the queue building. Mapped Single Rider and Premier Access doors are deliberately excluded.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/flight-force",
+      "osm": {
+        "type": "node",
+        "id": 11533610391
+      },
+      "node": 5886,
+      "before": [
+        48.8649981,
+        2.7793385
+      ],
+      "after": [
+        48.8649981,
+        2.7793385
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-52027319",
+      "name": "Cars Quatre Roues Rallye",
+      "status": "reviewed-queue",
+      "evidence": "Public start of winding queue way 342280359.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/cars-quatre-roues-rallye",
+      "osm": {
+        "type": "node",
+        "id": 10079976047
+      },
+      "node": 2817,
+      "before": [
+        48.8676995,
+        2.7778462
+      ],
+      "after": [
+        48.8676995,
+        2.7778462
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-9418185128",
+      "name": "Cars ROAD TRIP",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Cars ROAD TRIP; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/cars-road-trip",
+      "osm": {
+        "type": "node",
+        "id": 9418185128
+      },
+      "node": 3926,
+      "before": [
+        48.8663996,
+        2.774804
+      ],
+      "after": [
+        48.8663996,
+        2.774804
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-11263162318",
+      "name": "Crush's Coaster",
+      "status": "reviewed-queue",
+      "evidence": "Public start of winding queue way 549763894.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/crushs-coaster",
+      "osm": {
+        "type": "node",
+        "id": 2923663207
+      },
+      "node": 688,
+      "before": [
+        48.8682016,
+        2.7780598
+      ],
+      "after": [
+        48.8682016,
+        2.7780598
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-disney-cascade-of-lights-ref",
+      "name": "Disney Cascade of Lights",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Disney Cascade of Lights; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/disney-cascade-of-lights-ref",
+      "osm": {
+        "type": "node",
+        "id": 13444981714
+      },
+      "node": 7337,
+      "before": [
+        48.8656243,
+        2.7746738
+      ],
+      "after": [
+        48.8656243,
+        2.7746738
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-disneyprincess-cavalcade",
+      "name": "Disney Princess Cavalcade",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Adventure Way only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/disneyprincess-cavalcade",
+      "osm": null,
+      "node": 6863,
+      "before": [
+        48.8663073,
+        2.7766538
+      ],
+      "after": [
+        48.8663073,
+        2.7766538
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-14211776384",
+      "name": "Frozen Ever After",
+      "status": "reviewed-queue",
+      "evidence": "Tagged main entrance, Entrée Stand-by; excludes Single Rider and Premier Access.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/frozen-ever-after-ref",
+      "osm": {
+        "type": "node",
+        "id": 13618187777
+      },
+      "node": 7220,
+      "before": [
+        48.8640823,
+        2.7735203
+      ],
+      "after": [
+        48.8640823,
+        2.7735203
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-hero-training-center",
+      "name": "Hero Training Center",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Hero Training Center; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/hero-training-center",
+      "osm": {
+        "type": "way",
+        "id": 1271516015
+      },
+      "node": 3952,
+      "before": [
+        48.8653868,
+        2.778985
+      ],
+      "after": [
+        48.8653868,
+        2.778985
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-heroicwelcome",
+      "name": "Heroic Welcome",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/heroicwelcome",
+      "osm": null,
+      "node": 2783,
+      "before": [
+        48.8653852,
+        2.7792011
+      ],
+      "after": [
+        48.8653852,
+        2.7792011
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-11276030959",
+      "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+      "status": "reviewed-queue",
+      "evidence": "Public access way 1101542516.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/flying-carpets-over-agrabah",
+      "osm": {
+        "type": "node",
+        "id": 3493015889
+      },
+      "node": 1220,
+      "before": [
+        48.8682202,
+        2.7785434
+      ],
+      "after": [
+        48.8682202,
+        2.7785434
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-meet-character-zootropolis",
+      "name": "Meet a Character from Zootropolis",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Animation Celebration; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/meet-character-zootropolis",
+      "osm": {
+        "type": "way",
+        "id": 78038327
+      },
+      "node": 9010,
+      "before": [
+        48.8676995,
+        2.7778462
+      ],
+      "after": [
+        48.8674911,
+        2.7784108
+      ],
+      "movedMeters": 47.4,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-meet-toy-story-character",
+      "name": "Meet a Toy Story Character",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Worlds of Pixar only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/meet-toy-story-character",
+      "osm": null,
+      "node": 6232,
+      "before": [
+        48.8671103,
+        2.7767415
+      ],
+      "after": [
+        48.8671103,
+        2.7767415
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-meet-n-greet-jessie-or-friends",
+      "name": "Meet Jessie",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Rencontre avec Jessie ou ses amis; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/meet-n-greet-jessie-or-friends",
+      "osm": {
+        "type": "node",
+        "id": 12593786585
+      },
+      "node": 7732,
+      "before": [
+        48.8671103,
+        2.7767415
+      ],
+      "after": [
+        48.86768116,
+        2.77765694
+      ],
+      "movedMeters": 92.3,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-show-mickey-and-the-magician-old",
+      "name": "Mickey and the Magician",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Animagique Theater; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/show-mickey-and-the-magician-old",
+      "osm": {
+        "type": "way",
+        "id": 1469626864
+      },
+      "node": 7829,
+      "before": [
+        48.8680555,
+        2.7794295
+      ],
+      "after": [
+        48.8679079,
+        2.7788933
+      ],
+      "movedMeters": 42.5,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-miguels-fiesta-latina",
+      "name": "Miguel's Fiesta Latina",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Adventure Way only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/miguels-fiesta-latina",
+      "osm": null,
+      "node": 6863,
+      "before": [
+        48.8663073,
+        2.7766538
+      ],
+      "after": [
+        48.8663073,
+        2.7766538
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-minnies-dream-factory-ref",
+      "name": "Minnie’s Dream Factory",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Studio D: Minnie's Dream Factory; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/minnies-dream-factory-ref",
+      "osm": {
+        "type": "node",
+        "id": 12593786584
+      },
+      "node": 7931,
+      "before": [
+        48.8670533,
+        2.7798125
+      ],
+      "after": [
+        48.8666566,
+        2.7801914
+      ],
+      "movedMeters": 52.1,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1338725879",
+      "name": "Raiponce Tangled Spin",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Raiponce Tangled Spin; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/raiponce-tangled-spin-ref",
+      "osm": {
+        "type": "way",
+        "id": 1338725879
+      },
+      "node": 6863,
+      "before": [
+        48.8663073,
+        2.7766538
+      ],
+      "after": [
+        48.8663073,
+        2.7766538
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1269073076",
+      "name": "Ratatouille : L'Aventure totalement toquée de Rémy",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Ratatouille : L'Aventure totalement toquée de Rémy; tagged main door",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/ratatouille-the-adventure",
+      "osm": {
+        "type": "way",
+        "id": 1269073076
+      },
+      "node": 612,
+      "before": [
+        48.8675809,
+        2.7761305
+      ],
+      "after": [
+        48.8675809,
+        2.7761305
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-51547889",
+      "name": "RC Racer",
+      "status": "reviewed-queue",
+      "evidence": "Public start of main queue way 1214637198.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/rc-racer",
+      "osm": {
+        "type": "node",
+        "id": 8618820104
+      },
+      "node": 2557,
+      "before": [
+        48.8669526,
+        2.776573
+      ],
+      "after": [
+        48.8669526,
+        2.776573
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-rencontre-royale-ref",
+      "name": "Rencontre Royale",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Rencontre Royale; tagged main door",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/rencontre-royale-ref",
+      "osm": {
+        "type": "way",
+        "id": 1485420825
+      },
+      "node": 7217,
+      "before": [
+        48.8642781,
+        2.7731983
+      ],
+      "after": [
+        48.8642781,
+        2.7731983
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-disney-cascade-of-lights-rva",
+      "name": "Reserved Viewing Area : Disney Cascade of Lights",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/disney-cascade-of-lights-rva",
+      "osm": null,
+      "node": 7286,
+      "before": [
+        48.8655424,
+        2.7759301
+      ],
+      "after": [
+        48.8655424,
+        2.7759301
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1269081340",
+      "name": "Slinky® Dog Zigzag Spin",
+      "status": "reviewed-queue",
+      "evidence": "Tagged main entrance at start of queue way 265811121.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/slinky-dog-zigzag-spin",
+      "osm": {
+        "type": "node",
+        "id": 2714344904
+      },
+      "node": 644,
+      "before": [
+        48.8671361,
+        2.7769737
+      ],
+      "after": [
+        48.8671361,
+        2.7769737
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1271516013",
+      "name": "Spider-Man W.E.B. Adventure",
+      "status": "user-confirmed-entrance",
+      "evidence": "Entrance confirmed by the user at the blue location marker (reported GPS accuracy ±5 m) on the public walkway between Stark Factory and Spider-Man. OSM node 10024532531 on footway 1075097370 anchors the routing target; it is not a newly surveyed door coordinate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/spiderman-web-adventure",
+      "osm": {
+        "type": "node",
+        "id": 10024532531
+      },
+      "node": 2782,
+      "before": [
+        48.8663238,
+        2.7790647
+      ],
+      "after": [
+        48.865977,
+        2.7795707
+      ],
+      "movedMeters": 53.5,
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-stitch-live",
+      "name": "Stitch Live!",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/stitch-live",
+      "osm": null,
+      "node": 6977,
+      "before": [
+        48.866755,
+        2.7798341
+      ],
+      "after": [
+        48.866755,
+        2.7798341
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1469626867",
+      "name": "The Twilight Zone Tower of Terror",
+      "status": "reviewed-queue",
+      "evidence": "Public gate to the eastern queue lane, way 325098460; lane has no explicit regular-queue label.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/twilight-zone-tower-of-terror",
+      "osm": {
+        "type": "node",
+        "id": 10080172431
+      },
+      "node": 2833,
+      "before": [
+        48.8667419,
+        2.7787881
+      ],
+      "after": [
+        48.8667419,
+        2.7787881
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-pixar-show-ref",
+      "name": "TOGETHER: a Pixar Musical Adventure",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Studio Theater; tagged main door",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-adventure-world/pixar-show-ref",
+      "osm": {
+        "type": "way",
+        "id": 1469626865
+      },
+      "node": 7106,
+      "before": [
+        48.8671881,
+        2.7806026
+      ],
+      "after": [
+        48.8670533,
+        2.7798125
+      ],
+      "movedMeters": 59.7,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-1271483949",
+      "name": "Toy Soldiers Parachute Drop",
+      "status": "reviewed-queue",
+      "evidence": "Public start of winding queue way 516384127.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/toy-soldiers-parachute-drop",
+      "osm": {
+        "type": "node",
+        "id": 5041043096
+      },
+      "node": 1576,
+      "before": [
+        48.8671714,
+        2.7776006
+      ],
+      "after": [
+        48.8671714,
+        2.7776006
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://disneyparksblog.com/app/uploads/2026/03/Map-of-Disney-Adventure-World-1080x1080.png",
+      "rideId": "ride-world-premiere",
+      "name": "World Premiere",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM World Premiere; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disney-adventure-world/world-premiere",
+      "osm": {
+        "type": "way",
+        "id": 49734839
+      },
+      "node": 6951,
+      "before": [
+        48.8678281,
+        2.7799708
+      ],
+      "after": [
+        48.8678281,
+        2.7799708
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-11308499084",
+      "name": "\"it's a small world\"",
+      "status": "reviewed-queue",
+      "evidence": "Public start of named Stand-by line, way 1361666398.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/its-a-small-world",
+      "osm": {
+        "type": "node",
+        "id": 12606661843
+      },
+      "node": 6802,
+      "before": [
+        48.8746805,
+        2.7761574
+      ],
+      "after": [
+        48.8746805,
+        2.7761574
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-26625259",
+      "name": "Adventure Isle",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Adventure Isle; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/adventure-isle",
+      "osm": {
+        "type": "way",
+        "id": 26625259
+      },
+      "node": 333,
+      "before": [
+        48.8725896,
+        2.7735884
+      ],
+      "after": [
+        48.8725896,
+        2.7735884
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-905816888",
+      "name": "Alice's Curious Labyrinth",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Alice's Curious Labyrinth; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/alices-curious-labyrinth",
+      "osm": {
+        "type": "node",
+        "id": 905816888
+      },
+      "node": 2336,
+      "before": [
+        48.8744655,
+        2.7745067
+      ],
+      "after": [
+        48.8744655,
+        2.7745067
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-captain-hook",
+      "name": "An Encounter with Captain Hook",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Rencontre avec Capitaine Crochet; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-captain-hook",
+      "osm": {
+        "type": "node",
+        "id": 12642996207
+      },
+      "node": 11756,
+      "before": [
+        48.8725896,
+        2.7735884
+      ],
+      "after": [
+        48.87297091,
+        2.77424182
+      ],
+      "movedMeters": 63.9,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-jafar",
+      "name": "An Encounter with Jafar",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Rencontre avec Jafar; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-jafar",
+      "osm": {
+        "type": "node",
+        "id": 12642996203
+      },
+      "node": 11589,
+      "before": [
+        48.8725896,
+        2.7735884
+      ],
+      "after": [
+        48.8726225,
+        2.7748099
+      ],
+      "movedMeters": 89.4,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-queen-hearts-wonderland",
+      "name": "An Encounter with the Queen of Hearts or with your friends from Wonderland",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Fantasyland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-queen-hearts-wonderland",
+      "osm": null,
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-204210418",
+      "name": "Autopia",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Autopia; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/autopia",
+      "osm": {
+        "type": "way",
+        "id": 204210418
+      },
+      "node": 3425,
+      "before": [
+        48.8730814,
+        2.7787237
+      ],
+      "after": [
+        48.8730814,
+        2.7787237
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1011446599",
+      "name": "Big Thunder Mountain",
+      "status": "reviewed-queue",
+      "evidence": "Public start of the long regular queue, way 249428904.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/big-thunder-mountain",
+      "osm": {
+        "type": "node",
+        "id": 2560362176
+      },
+      "node": 613,
+      "before": [
+        48.8715898,
+        2.774803
+      ],
+      "after": [
+        48.8715898,
+        2.774803
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1267201555",
+      "name": "Blanche-Neige et les Sept Nains®",
+      "status": "reviewed-queue",
+      "evidence": "Public start of queue way 306315115.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/blanche-neige-et-les-sept-nains",
+      "osm": {
+        "type": "node",
+        "id": 3111869435
+      },
+      "node": 1083,
+      "before": [
+        48.8734724,
+        2.7755086
+      ],
+      "after": [
+        48.8734724,
+        2.7755086
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-905816995",
+      "name": "Buzz Lightyear Laser Blast",
+      "status": "reviewed-queue",
+      "evidence": "Public queue access gate, way 296633160; unnamed lane.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/buzz-lightyear-laser-blast",
+      "osm": {
+        "type": "node",
+        "id": 3003692203
+      },
+      "node": 745,
+      "before": [
+        48.8734411,
+        2.7779784
+      ],
+      "after": [
+        48.8734411,
+        2.7779784
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1012694152",
+      "name": "Casey Jr. – le Petit Train du Cirque",
+      "status": "reviewed-queue",
+      "evidence": "Tagged entrance at start of winding queue way 1172263970.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/casey-jr-le-petit-train-du-cirque",
+      "osm": {
+        "type": "node",
+        "id": 10891931089
+      },
+      "node": 4191,
+      "before": [
+        48.8751626,
+        2.7741782
+      ],
+      "after": [
+        48.8751626,
+        2.7741782
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-discovery-arcade",
+      "name": "Discovery Arcade",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Discovery Arcade; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/discovery-arcade",
+      "osm": {
+        "type": "way",
+        "id": 40251292
+      },
+      "node": 1889,
+      "before": [
+        48.8718085,
+        2.7783503
+      ],
+      "after": [
+        48.8718085,
+        2.7783503
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-disney-performing-arts-programme",
+      "name": "Disney Performing Arts Programme",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Videopolis; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/disney-performing-arts-programme",
+      "osm": {
+        "type": "way",
+        "id": 78036718
+      },
+      "node": 15244,
+      "before": [
+        48.8738966,
+        2.7783857
+      ],
+      "after": [
+        48.8745225,
+        2.7782708
+      ],
+      "movedMeters": 70.1,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-disney-stars-on-parade-old",
+      "name": "Disney Stars on Parade",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-stars-on-parade-old",
+      "osm": null,
+      "node": 6743,
+      "before": [
+        48.8727432,
+        2.7770029
+      ],
+      "after": [
+        48.8727432,
+        2.7770029
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-nighttime-spectacular",
+      "name": "Disney Tales of Magic",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/nighttime-spectacular",
+      "osm": null,
+      "node": 6757,
+      "before": [
+        48.8728505,
+        2.7764415
+      ],
+      "after": [
+        48.8728505,
+        2.7764415
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-p1da10",
+      "name": "Disneyland Railroad Discoveryland Station",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Disneyland Railroad Discoveryland Station; public walking approach, not surveyed queue entrance",
+      "officialUrl": null,
+      "osm": {
+        "type": "node",
+        "id": 258856876
+      },
+      "node": 554,
+      "before": [
+        48.8747185,
+        2.7784085
+      ],
+      "after": [
+        48.8747185,
+        2.7784085
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-p1na16",
+      "name": "Disneyland Railroad Fantasyland Station",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Disneyland Railroad Fantasyland Station; public walking approach, not surveyed queue entrance",
+      "officialUrl": null,
+      "osm": {
+        "type": "node",
+        "id": 258856870
+      },
+      "node": 2301,
+      "before": [
+        48.8746457,
+        2.7737482
+      ],
+      "after": [
+        48.8746457,
+        2.7737482
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-p1ra10",
+      "name": "Disneyland Railroad Frontierland Depot",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Disneyland Railroad Frontierland Depot; public walking approach, not surveyed queue entrance",
+      "officialUrl": null,
+      "osm": {
+        "type": "node",
+        "id": 258856858
+      },
+      "node": 5559,
+      "before": [
+        48.8702378,
+        2.7722596
+      ],
+      "after": [
+        48.8702378,
+        2.7722596
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-disneyland-railroad-main-street-station",
+      "name": "Disneyland Railroad Main Street Station",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Disneyland Railroad Main Street Station; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/disneyland-railroad-main-street-station",
+      "osm": {
+        "type": "node",
+        "id": 258856843
+      },
+      "node": 1062,
+      "before": [
+        48.8707712,
+        2.7791549
+      ],
+      "after": [
+        48.8707712,
+        2.7791549
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-dr-facilier",
+      "name": "Dr. Facilier Encounter",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Frontierland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-dr-facilier",
+      "osm": null,
+      "node": 5348,
+      "before": [
+        48.8709531,
+        2.7769427
+      ],
+      "after": [
+        48.8709531,
+        2.7769427
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-905816849",
+      "name": "Drache unter dem Schloss",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Château de la Belle au bois dormant; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/la-taniere-du-dragon",
+      "osm": {
+        "type": "way",
+        "id": 1359852391
+      },
+      "node": 999,
+      "before": [
+        48.8730992,
+        2.7758162
+      ],
+      "after": [
+        48.8730992,
+        2.7758162
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-51551435",
+      "name": "Dumbo the Flying Elephant",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Dumbo the Flying Elephant; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/dumbo-the-flying-elephant",
+      "osm": {
+        "type": "way",
+        "id": 51551435
+      },
+      "node": 1134,
+      "before": [
+        48.8740997,
+        2.7746385
+      ],
+      "after": [
+        48.8740997,
+        2.7746385
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-enchantment-royal-castle-stage",
+      "name": "Enchantment on the Royal Castle Stage",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Le Théâtre du Château; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/enchantment-royal-castle-stage",
+      "osm": {
+        "type": "way",
+        "id": 285765332
+      },
+      "node": 12939,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8732708,
+        2.7766348
+      ],
+      "movedMeters": 42.1,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-frontierland-playground",
+      "name": "Frontierland Playground",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Frontierland Playground; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/frontierland-playground",
+      "osm": {
+        "type": "way",
+        "id": 87075631
+      },
+      "node": 5445,
+      "before": [
+        48.8704582,
+        2.7741329
+      ],
+      "after": [
+        48.8704582,
+        2.7741329
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-glamour-darling-cruella-de-vil",
+      "name": "Glamour Darling... It's Cruella De Vil!",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Fantasyland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/glamour-darling-cruella-de-vil",
+      "osm": null,
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-horse-drawn-streetcars",
+      "name": "Horse-Drawn Streetcars",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Horse-Drawn Streetcars; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/horse-drawn-streetcars",
+      "osm": {
+        "type": "node",
+        "id": 12544309283
+      },
+      "node": 3795,
+      "before": [
+        48.8710471,
+        2.778795
+      ],
+      "after": [
+        48.8710471,
+        2.778795
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-40362832",
+      "name": "Indiana Jones™ and the Temple of Peril",
+      "status": "reviewed-queue",
+      "evidence": "Public regular-queue entrance way 1231391866; excludes parallel Premier Access.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/indiana-jones-and-the-temple-of-peril",
+      "osm": {
+        "type": "node",
+        "id": 11420450730
+      },
+      "node": 5702,
+      "before": [
+        48.8724157,
+        2.7720745
+      ],
+      "after": [
+        48.8724157,
+        2.7720745
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-la-cabane-des-robinson",
+      "name": "La Cabane des Robinson",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM La Cabane des Robinson; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/la-cabane-des-robinson",
+      "osm": {
+        "type": "way",
+        "id": 1230887898
+      },
+      "node": 328,
+      "before": [
+        48.8723407,
+        2.7735744
+      ],
+      "after": [
+        48.8723407,
+        2.7735744
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-lady-tremaine-daughters-stroll",
+      "name": "Lady Tremaine and Her Daughters Take a Stroll",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Fantasyland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/lady-tremaine-daughters-stroll",
+      "osm": null,
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-302301688",
+      "name": "Le Carrousel de Lancelot",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Le Carrousel de Lancelot; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/le-carrousel-de-lancelot",
+      "osm": {
+        "type": "way",
+        "id": 302301688
+      },
+      "node": 2919,
+      "before": [
+        48.873713,
+        2.7755839
+      ],
+      "after": [
+        48.873713,
+        2.7755839
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-le-passage-enchante-daladdin",
+      "name": "Le Passage Enchanté d'Aladdin",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Le Passage Enchanté d'Aladdin; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/le-passage-enchante-daladdin",
+      "osm": {
+        "type": "way",
+        "id": 1234456621
+      },
+      "node": 5794,
+      "before": [
+        48.8724304,
+        2.7753681
+      ],
+      "after": [
+        48.8724304,
+        2.7753681
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1012678087",
+      "name": "Le Pays des Contes de Fées, présenté par Vittel",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Le Pays des Contes de Fées, présenté par Vittel; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/le-pays-des-contes-de-fees",
+      "osm": {
+        "type": "node",
+        "id": 1012678087
+      },
+      "node": 6985,
+      "before": [
+        48.8752866,
+        2.7746762
+      ],
+      "after": [
+        48.8752866,
+        2.7746762
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-les-mysteres-du-nautilus",
+      "name": "Les Mystères du Nautilus",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Les Mystères du Nautilus; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/les-mysteres-du-nautilus",
+      "osm": {
+        "type": "node",
+        "id": 11251510637
+      },
+      "node": 856,
+      "before": [
+        48.8734238,
+        2.7795314
+      ],
+      "after": [
+        48.8734238,
+        2.7795314
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1267201556",
+      "name": "Les Voyages de Pinocchio",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Les Voyages de Pinocchio; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/les-voyages-de-pinocchio",
+      "osm": {
+        "type": "way",
+        "id": 1267201556
+      },
+      "node": 1098,
+      "before": [
+        48.873613,
+        2.7749795
+      ],
+      "after": [
+        48.873613,
+        2.7749795
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-liberty-arcade",
+      "name": "Liberty Arcade",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Liberty Arcade; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/liberty-arcade",
+      "osm": {
+        "type": "way",
+        "id": 40251275
+      },
+      "node": 159,
+      "before": [
+        48.8715236,
+        2.7776261
+      ],
+      "after": [
+        48.8715236,
+        2.7776261
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-78038415",
+      "name": "Mad Hatter's Tea Cups",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Mad Hatter's Tea Cups; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/mad-hatters-tea-cups",
+      "osm": {
+        "type": "way",
+        "id": 78038415
+      },
+      "node": 3396,
+      "before": [
+        48.8743384,
+        2.7750029
+      ],
+      "after": [
+        48.8743384,
+        2.7750029
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-main-street-vehicles",
+      "name": "Main Street Vehicles",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Main Street Vehicles; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/main-street-vehicles",
+      "osm": {
+        "type": "node",
+        "id": 2999825244
+      },
+      "node": 7038,
+      "before": [
+        48.8713574,
+        2.7790049
+      ],
+      "after": [
+        48.8713574,
+        2.7790049
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-goofy-skeleton",
+      "name": "Meet a goofy skeleton or his friend",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Frontierland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-goofy-skeleton",
+      "osm": null,
+      "node": 5348,
+      "before": [
+        48.8709531,
+        2.7769427
+      ],
+      "after": [
+        48.8709531,
+        2.7769427
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-chip-dale",
+      "name": "Meet Chip and Dale",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Adventureland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-chip-dale",
+      "osm": null,
+      "node": 333,
+      "before": [
+        48.8725896,
+        2.7735884
+      ],
+      "after": [
+        48.8725896,
+        2.7735884
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-daisy-donald",
+      "name": "Meet Daisy and Donald",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Main Street U.S.A. only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-daisy-donald",
+      "osm": null,
+      "node": 478,
+      "before": [
+        48.8709062,
+        2.7785481
+      ],
+      "after": [
+        48.8709062,
+        2.7785481
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-jack-skellington",
+      "name": "Meet Jack Skellington and Sally (from Tim Burton’s The Nightmare Before Christmas ©Disney)",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Frontierland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-jack-skellington",
+      "osm": null,
+      "node": 5348,
+      "before": [
+        48.8709531,
+        2.7769427
+      ],
+      "after": [
+        48.8709531,
+        2.7769427
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-mickey",
+      "name": "Meet Mickey Mouse",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Meet Mickey Mouse; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-mickey",
+      "osm": {
+        "type": "node",
+        "id": 11309964892
+      },
+      "node": 2292,
+      "before": [
+        48.8744057,
+        2.7738538
+      ],
+      "after": [
+        48.8744057,
+        2.7738538
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-minnie-across-europe",
+      "name": "Meet Minnie or her friends across Europe",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Discoveryland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-minnie-across-europe",
+      "osm": null,
+      "node": 2109,
+      "before": [
+        48.8748133,
+        2.7789915
+      ],
+      "after": [
+        48.8748133,
+        2.7789915
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-meet-n-greet-stitch",
+      "name": "Meet Stitch",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Main Street U.S.A. only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/meet-n-greet-stitch",
+      "osm": null,
+      "node": 478,
+      "before": [
+        48.8709062,
+        2.7785481
+      ],
+      "after": [
+        48.8709062,
+        2.7785481
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-mickeys-halloween-celebration",
+      "name": "Mickey’s Halloween Celebration",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/mickeys-halloween-celebration",
+      "osm": null,
+      "node": 6743,
+      "before": [
+        48.8727432,
+        2.7770029
+      ],
+      "after": [
+        48.8727432,
+        2.7770029
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-discoveryland-theatre",
+      "name": "Mickey’s PhilharMagic",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Discoveryland Theatre; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/discoveryland-theatre",
+      "osm": {
+        "type": "way",
+        "id": 40404111
+      },
+      "node": 13963,
+      "before": [
+        48.87439,
+        2.779859
+      ],
+      "after": [
+        48.8745353,
+        2.7797494
+      ],
+      "movedMeters": 18.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-mysterious-meeting",
+      "name": "Mysterious Meeting",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Frontierland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/mysterious-meeting",
+      "osm": null,
+      "node": 5348,
+      "before": [
+        48.8709531,
+        2.7769427
+      ],
+      "after": [
+        48.8709531,
+        2.7769427
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-nobody-does-it-like-gaston",
+      "name": "Nobody Does It Like Gaston!",
+      "status": "variable-or-unspecified-area",
+      "evidence": "Official catalogue gives Fantasyland only; no fixed meeting point confirmed. Position remains explicitly approximate.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/nobody-does-it-like-gaston",
+      "osm": null,
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-296573532",
+      "name": "Orbitron",
+      "status": "reviewed-queue",
+      "evidence": "Public start of winding regular queue way 296573538.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/orbitron",
+      "osm": {
+        "type": "node",
+        "id": 3003692226
+      },
+      "node": 749,
+      "before": [
+        48.8734875,
+        2.7784659
+      ],
+      "after": [
+        48.8734875,
+        2.7784659
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-555315790",
+      "name": "Peter Pan's Flight",
+      "status": "reviewed-queue",
+      "evidence": "Public start of the long regular queue, way 322924299; excludes the short parallel queue.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/peter-pans-flight",
+      "osm": {
+        "type": "node",
+        "id": 3297092067
+      },
+      "node": 1123,
+      "before": [
+        48.8738555,
+        2.7740976
+      ],
+      "after": [
+        48.8738555,
+        2.7740976
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1223755258",
+      "name": "Phantom Manor",
+      "status": "reviewed-queue",
+      "evidence": "Public entrance gate of main outdoor queue, way 50292761.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/phantom-manor",
+      "osm": {
+        "type": "node",
+        "id": 639046861
+      },
+      "node": 213,
+      "before": [
+        48.8709535,
+        2.7768148
+      ],
+      "after": [
+        48.8709535,
+        2.7768148
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-pirate-galleon",
+      "name": "Pirate Galleon",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Pirate Galleon; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/pirate-galleon",
+      "osm": {
+        "type": "way",
+        "id": 54032696
+      },
+      "node": 1868,
+      "before": [
+        48.8729271,
+        2.7736228
+      ],
+      "after": [
+        48.8729271,
+        2.7736228
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-555005100",
+      "name": "Pirates of the Caribbean",
+      "status": "reviewed-queue",
+      "evidence": "Tagged entrance shared by regular queue way 338068227 and Premier Access.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/pirates-of-the-caribbean",
+      "osm": {
+        "type": "node",
+        "id": 3451291191
+      },
+      "node": 1162,
+      "before": [
+        48.8734776,
+        2.7734159
+      ],
+      "after": [
+        48.8734776,
+        2.7734159
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-pirates-beach",
+      "name": "Pirates' Beach",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Pirates' Beach; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/pirates-beach",
+      "osm": {
+        "type": "way",
+        "id": 457506510
+      },
+      "node": 5961,
+      "before": [
+        48.8727742,
+        2.7737588
+      ],
+      "after": [
+        48.8727742,
+        2.7737588
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-princess-pavilion",
+      "name": "Princess Pavilion: A Royal Invitation",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Princess Pavilion; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/princess-pavilion",
+      "osm": {
+        "type": "way",
+        "id": 159671422
+      },
+      "node": 13851,
+      "before": [
+        48.8747518,
+        2.7755451
+      ],
+      "after": [
+        48.8749632,
+        2.775469
+      ],
+      "movedMeters": 24.2,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-disney-stars-on-parade-rva",
+      "name": "Reserved viewing area: Disney Stars on Parade",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disney-stars-on-parade-rva",
+      "osm": null,
+      "node": 6743,
+      "before": [
+        48.8727432,
+        2.7770029
+      ],
+      "after": [
+        48.8727432,
+        2.7770029
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-nighttime-show",
+      "name": "Reserved viewing area: Disney Tales of Magic",
+      "status": "source-location-approach",
+      "evidence": "Existing venue coordinate checked against official park/land and reachable pedestrian endpoint; exact entrance not independently mapped.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/nighttime-show",
+      "osm": null,
+      "node": 3529,
+      "before": [
+        48.8721615,
+        2.7764815
+      ],
+      "after": [
+        48.8721615,
+        2.7764815
+      ],
+      "movedMeters": 0.0,
+      "eventSetting": "outdoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-rustler-roundup-shootin-gallery",
+      "name": "Rustler Roundup Shootin' Gallery",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Rustler Roundup Shootin' Gallery; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/rustler-roundup-shootin-gallery",
+      "osm": {
+        "type": "way",
+        "id": 1224807682
+      },
+      "node": 5265,
+      "before": [
+        48.8715725,
+        2.7757486
+      ],
+      "after": [
+        48.8715725,
+        2.7757486
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-1359852391",
+      "name": "Schloss-Rundgang",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Château de la Belle au bois dormant; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/la-galerie-de-la-belle-au-bois-dormant",
+      "osm": {
+        "type": "way",
+        "id": 1359852391
+      },
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-sleeping-beauty-castle",
+      "name": "Sleeping Beauty Castle",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Château de la Belle au bois dormant; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/sleeping-beauty-castle",
+      "osm": {
+        "type": "way",
+        "id": 1359852391
+      },
+      "node": 558,
+      "before": [
+        48.8731026,
+        2.7761195
+      ],
+      "after": [
+        48.8731026,
+        2.7761195
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-11309964890",
+      "name": "Star Tours : L'Aventure Continue",
+      "status": "reviewed-queue",
+      "evidence": "Tagged entrance connected to public approach and indoor queue ways 1130624519 and 297557677.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/star-tours-the-aventures-continue",
+      "osm": {
+        "type": "node",
+        "id": 3014457251
+      },
+      "node": 919,
+      "before": [
+        48.8746143,
+        2.7787842
+      ],
+      "after": [
+        48.8746143,
+        2.7787842
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-11251453535",
+      "name": "Star Wars Hyperspace Mountain",
+      "status": "reviewed-queue",
+      "evidence": "Shared public approach to Stand by way 395126454; the tagged door is absent from the walking graph.",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/hyper-space-mountain",
+      "osm": {
+        "type": "node",
+        "id": 12563467284
+      },
+      "node": 6623,
+      "before": [
+        48.8734881,
+        2.7788322
+      ],
+      "after": [
+        48.8734881,
+        2.7788322
+      ],
+      "movedMeters": 0.0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-starport",
+      "name": "Starport",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Starport Photographs; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/starport",
+      "osm": {
+        "type": "way",
+        "id": 78037572
+      },
+      "node": 13953,
+      "before": [
+        48.8748133,
+        2.7789915
+      ],
+      "after": [
+        48.8747372,
+        2.7791046
+      ],
+      "movedMeters": 11.8,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 0
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-lion-king-show",
+      "name": "The Lion King: Rhythms of the Pride Lands",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Frontierland Theater; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/entertainment/disneyland-park/lion-king-show",
+      "osm": {
+        "type": "way",
+        "id": 40223257
+      },
+      "node": 261,
+      "before": [
+        48.8699311,
+        2.772546
+      ],
+      "after": [
+        48.8702274,
+        2.7728053
+      ],
+      "movedMeters": 38.0,
+      "eventSetting": "indoor",
+      "arrivalLeadMinutes": 15
+    },
+    {
+      "disneyMap": "https://brochure.disneylandparis.com/HCP/EN/adlp/common/data/catalogue.pdf",
+      "rideId": "ride-thunder-mesa-riverboat-landing",
+      "name": "Thunder Mesa Riverboat Landing",
+      "status": "mapped-venue-approach",
+      "evidence": "Official venue/identity matched to OSM Thunder Mesa Riverboat Landing; public walking approach, not surveyed queue entrance",
+      "officialUrl": "https://www.disneylandparis.com/en-gb/attractions/disneyland-park/thunder-mesa-riverboat-landing",
+      "osm": {
+        "type": "way",
+        "id": 60629116
+      },
+      "node": 5402,
+      "before": [
+        48.8711942,
+        2.7765294
+      ],
+      "after": [
+        48.8711942,
+        2.7765294
+      ],
+      "movedMeters": 0.0
+    }
+  ]
+}

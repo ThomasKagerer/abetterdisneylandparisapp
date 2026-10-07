@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const s=fs.readFileSync(__dirname+'/../dist/app.js','utf8');
+const rides=[{id:'a',name:'A',node:0,offset:60},{id:'b',name:'B',node:1,offset:0},{id:'c',name:'C',node:2}];
+const ctx={targetAvailable:()=>true,data:{rides},origin:[0,0],router:{snap:()=>({node:0,distance:5}),tree:()=>({ds:[10,40,Infinity]})},DisneyRatings:{get:r=>({score:r.id==='a'?5:3})}};
+vm.createContext(require('./helpers/near-park.cjs')(ctx));vm.runInContext(s.slice(s.indexOf('function rideDistances('),s.indexOf('let lastRideDistancePaint=')),ctx);
+const distances=ctx.rideDistances();assert.equal(distances.get('a'),75);assert.equal(distances.get('b'),45);
+assert.deepEqual(Array.from(ctx.sortRides(rides,'distance',distances),r=>r.id),['b','a','c']);
+assert.deepEqual(Array.from(ctx.sortRides(rides,'rating',distances),r=>r.id),['a','b','c']);
+ctx.targetAvailable=r=>r.id!=='a';
+for(const mode of ['distance','rating','name'])assert.equal(ctx.sortRides(rides,mode,distances).at(-1).id,'a','Closed rides follow all available rides for every sort');
+ctx.router.snap=()=>({node:0,distance:100});assert.equal(ctx.rideDistances().size,0);
+console.log('Passed: walking distance plus start/entrance offsets, unreachable last, rating option, no distance with invalid origin.');

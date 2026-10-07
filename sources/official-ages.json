@@ -1,0 +1,556 @@
+{
+  "sourceUrl": "https://www.disneylandparis.com/en-int/attractions",
+  "checkedAt": "2026-10-06",
+  "groups": {
+    "Preschoolers": [
+      {
+        "name": "\"it's a small world\"",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/its-a-small-world"
+      },
+      {
+        "name": "Adventure Isle",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/adventure-isle"
+      },
+      {
+        "name": "Alice's Curious Labyrinth",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/alices-curious-labyrinth"
+      },
+      {
+        "name": "Blanche-Neige et les Sept Nains®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/blanche-neige-et-les-sept-nains"
+      },
+      {
+        "name": "Cars ROAD TRIP",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/cars-road-trip"
+      },
+      {
+        "name": "Casey Jr. – le Petit Train du Cirque",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/casey-jr-le-petit-train-du-cirque"
+      },
+      {
+        "name": "Discovery Arcade",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/discovery-arcade"
+      },
+      {
+        "name": "Disneyland Railroad Main Street Station",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/disneyland-railroad-main-street-station"
+      },
+      {
+        "name": "Dumbo the Flying Elephant",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/dumbo-the-flying-elephant"
+      },
+      {
+        "name": "Horse-Drawn Streetcars",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/horse-drawn-streetcars"
+      },
+      {
+        "name": "La Cabane des Robinson",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-cabane-des-robinson"
+      },
+      {
+        "name": "La Tanière du Dragon",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-taniere-du-dragon"
+      },
+      {
+        "name": "Le Carrousel de Lancelot",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-carrousel-de-lancelot"
+      },
+      {
+        "name": "Le Passage Enchanté d'Aladdin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-passage-enchante-daladdin"
+      },
+      {
+        "name": "Le Pays des Contes de Fées, presented by Vittel",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-pays-des-contes-de-fees"
+      },
+      {
+        "name": "Les Mystères du Nautilus",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/les-mysteres-du-nautilus"
+      },
+      {
+        "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flying-carpets-over-agrabah"
+      },
+      {
+        "name": "Les Voyages de Pinocchio",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/les-voyages-de-pinocchio"
+      },
+      {
+        "name": "Liberty Arcade",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/liberty-arcade"
+      },
+      {
+        "name": "Main Street Vehicles",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/main-street-vehicles"
+      },
+      {
+        "name": "Peter Pan's Flight",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/peter-pans-flight"
+      },
+      {
+        "name": "Phantom Manor",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/phantom-manor"
+      },
+      {
+        "name": "Pirates of the Caribbean",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirates-of-the-caribbean"
+      },
+      {
+        "name": "Ratatouille : L’Aventure Totalement Toquée de Rémy​",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/ratatouille-the-adventure"
+      },
+      {
+        "name": "Sleeping Beauty Castle",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/sleeping-beauty-castle"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Thunder Mesa Riverboat Landing",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/thunder-mesa-riverboat-landing"
+      },
+      {
+        "name": "World Premiere",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/world-premiere"
+      },
+      {
+        "name": "Buzz Lightyear Laser Blast",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/buzz-lightyear-laser-blast"
+      },
+      {
+        "name": "La Galerie de la Belle au Bois Dormant",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-galerie-de-la-belle-au-bois-dormant"
+      },
+      {
+        "name": "Pirate Galleon",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirate-galleon"
+      }
+    ],
+    "From the age of 1 year": [
+      {
+        "name": "Slinky® Dog Zigzag Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/slinky-dog-zigzag-spin"
+      }
+    ],
+    "Kids": [
+      {
+        "name": "Autopia, presented by Avis",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/autopia"
+      },
+      {
+        "name": "Avengers Assemble: Flight Force",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flight-force"
+      },
+      {
+        "name": "Big Thunder Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/big-thunder-mountain"
+      },
+      {
+        "name": "Frontierland Playground",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/frontierland-playground"
+      },
+      {
+        "name": "Frozen Ever After",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/frozen-ever-after-ref"
+      },
+      {
+        "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flying-carpets-over-agrabah"
+      },
+      {
+        "name": "Phantom Manor",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/phantom-manor"
+      },
+      {
+        "name": "Pirates' Beach",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirates-beach"
+      },
+      {
+        "name": "RC Racer",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/rc-racer"
+      },
+      {
+        "name": "Raiponce Tangled Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/raiponce-tangled-spin-ref"
+      },
+      {
+        "name": "Rustler Roundup Shootin' Gallery",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/rustler-roundup-shootin-gallery"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Star Tours: The Adventures Continue*",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/star-tours-the-aventures-continue"
+      },
+      {
+        "name": "Toy Soldiers Parachute Drop",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/toy-soldiers-parachute-drop"
+      },
+      {
+        "name": "Buzz Lightyear Laser Blast",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/buzz-lightyear-laser-blast"
+      },
+      {
+        "name": "Crush's Coaster",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/crushs-coaster"
+      }
+    ],
+    "Tweens": [
+      {
+        "name": "Autopia, presented by Avis",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/autopia"
+      },
+      {
+        "name": "Avengers Assemble: Flight Force",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flight-force"
+      },
+      {
+        "name": "Big Thunder Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/big-thunder-mountain"
+      },
+      {
+        "name": "Frontierland Playground",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/frontierland-playground"
+      },
+      {
+        "name": "Frozen Ever After",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/frozen-ever-after-ref"
+      },
+      {
+        "name": "Indiana Jones™ and the Temple of Peril",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/indiana-jones-and-the-temple-of-peril"
+      },
+      {
+        "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flying-carpets-over-agrabah"
+      },
+      {
+        "name": "Phantom Manor",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/phantom-manor"
+      },
+      {
+        "name": "Pirates' Beach",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirates-beach"
+      },
+      {
+        "name": "RC Racer",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/rc-racer"
+      },
+      {
+        "name": "Raiponce Tangled Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/raiponce-tangled-spin-ref"
+      },
+      {
+        "name": "Rustler Roundup Shootin' Gallery",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/rustler-roundup-shootin-gallery"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Star Tours: The Adventures Continue*",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/star-tours-the-aventures-continue"
+      },
+      {
+        "name": "Star Wars Hyperspace Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/hyper-space-mountain"
+      },
+      {
+        "name": "The Twilight Zone Tower of Terror",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/twilight-zone-tower-of-terror"
+      },
+      {
+        "name": "Toy Soldiers Parachute Drop",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/toy-soldiers-parachute-drop"
+      },
+      {
+        "name": "Buzz Lightyear Laser Blast",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/buzz-lightyear-laser-blast"
+      },
+      {
+        "name": "Crush's Coaster",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/crushs-coaster"
+      }
+    ],
+    "Teens": [
+      {
+        "name": "Autopia, presented by Avis",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/autopia"
+      },
+      {
+        "name": "Avengers Assemble: Flight Force",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flight-force"
+      },
+      {
+        "name": "Big Thunder Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/big-thunder-mountain"
+      },
+      {
+        "name": "Frozen Ever After",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/frozen-ever-after-ref"
+      },
+      {
+        "name": "Indiana Jones™ and the Temple of Peril",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/indiana-jones-and-the-temple-of-peril"
+      },
+      {
+        "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flying-carpets-over-agrabah"
+      },
+      {
+        "name": "Phantom Manor",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/phantom-manor"
+      },
+      {
+        "name": "RC Racer",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/rc-racer"
+      },
+      {
+        "name": "Raiponce Tangled Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/raiponce-tangled-spin-ref"
+      },
+      {
+        "name": "Rustler Roundup Shootin' Gallery",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/rustler-roundup-shootin-gallery"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Star Tours: The Adventures Continue*",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/star-tours-the-aventures-continue"
+      },
+      {
+        "name": "Star Wars Hyperspace Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/hyper-space-mountain"
+      },
+      {
+        "name": "The Twilight Zone Tower of Terror",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/twilight-zone-tower-of-terror"
+      },
+      {
+        "name": "Toy Soldiers Parachute Drop",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/toy-soldiers-parachute-drop"
+      },
+      {
+        "name": "Buzz Lightyear Laser Blast",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/buzz-lightyear-laser-blast"
+      },
+      {
+        "name": "Crush's Coaster",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/crushs-coaster"
+      }
+    ],
+    "Adults": [
+      {
+        "name": "Autopia, presented by Avis",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/autopia"
+      },
+      {
+        "name": "Avengers Assemble: Flight Force",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flight-force"
+      },
+      {
+        "name": "Big Thunder Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/big-thunder-mountain"
+      },
+      {
+        "name": "Frozen Ever After",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/frozen-ever-after-ref"
+      },
+      {
+        "name": "Indiana Jones™ and the Temple of Peril",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/indiana-jones-and-the-temple-of-peril"
+      },
+      {
+        "name": "Les Tapis Volants - Flying Carpets Over Agrabah®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/flying-carpets-over-agrabah"
+      },
+      {
+        "name": "Phantom Manor",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/phantom-manor"
+      },
+      {
+        "name": "RC Racer",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/rc-racer"
+      },
+      {
+        "name": "Raiponce Tangled Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/raiponce-tangled-spin-ref"
+      },
+      {
+        "name": "Rustler Roundup Shootin' Gallery",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/rustler-roundup-shootin-gallery"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Star Tours: The Adventures Continue*",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/star-tours-the-aventures-continue"
+      },
+      {
+        "name": "Star Wars Hyperspace Mountain",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/hyper-space-mountain"
+      },
+      {
+        "name": "The Twilight Zone Tower of Terror",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/twilight-zone-tower-of-terror"
+      },
+      {
+        "name": "Toy Soldiers Parachute Drop",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/toy-soldiers-parachute-drop"
+      },
+      {
+        "name": "Buzz Lightyear Laser Blast",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/buzz-lightyear-laser-blast"
+      },
+      {
+        "name": "Crush's Coaster",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/crushs-coaster"
+      }
+    ],
+    "All Ages": [
+      {
+        "name": "\"it's a small world\"",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/its-a-small-world-app"
+      },
+      {
+        "name": "Adventure Isle",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/adventure-isle"
+      },
+      {
+        "name": "Alice's Curious Labyrinth",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/alices-curious-labyrinth"
+      },
+      {
+        "name": "Blanche-Neige et les Sept Nains®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/blanche-neige-et-les-sept-nains"
+      },
+      {
+        "name": "Cars Quatre Roues Rallye",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/cars-quatre-roues-rallye"
+      },
+      {
+        "name": "Cars ROAD TRIP",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/cars-road-trip"
+      },
+      {
+        "name": "Casey Jr. – le Petit Train du Cirque",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/casey-jr-le-petit-train-du-cirque"
+      },
+      {
+        "name": "Discovery Arcade",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/discovery-arcade"
+      },
+      {
+        "name": "Disneyland Railroad Main Street Station",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/disneyland-railroad-main-street-station"
+      },
+      {
+        "name": "Dumbo the Flying Elephant",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/dumbo-the-flying-elephant"
+      },
+      {
+        "name": "Frozen Ever After",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/frozen-ever-after-ref"
+      },
+      {
+        "name": "Horse-Drawn Streetcars",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/horse-drawn-streetcars"
+      },
+      {
+        "name": "La Cabane des Robinson",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-cabane-des-robinson"
+      },
+      {
+        "name": "La Tanière du Dragon",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-taniere-du-dragon"
+      },
+      {
+        "name": "Le Carrousel de Lancelot",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-carrousel-de-lancelot"
+      },
+      {
+        "name": "Le Passage Enchanté d'Aladdin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-passage-enchante-daladdin"
+      },
+      {
+        "name": "Le Pays des Contes de Fées, presented by Vittel",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/le-pays-des-contes-de-fees"
+      },
+      {
+        "name": "Les Mystères du Nautilus",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/les-mysteres-du-nautilus"
+      },
+      {
+        "name": "Les Voyages de Pinocchio",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/les-voyages-de-pinocchio"
+      },
+      {
+        "name": "Liberty Arcade",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/liberty-arcade"
+      },
+      {
+        "name": "Mad Hatter's Tea Cups",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/mad-hatters-tea-cups"
+      },
+      {
+        "name": "Main Street Vehicles",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/main-street-vehicles"
+      },
+      {
+        "name": "Orbitron®",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/orbitron"
+      },
+      {
+        "name": "Peter Pan's Flight",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/peter-pans-flight"
+      },
+      {
+        "name": "Pirates of the Caribbean",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirates-of-the-caribbean"
+      },
+      {
+        "name": "Raiponce Tangled Spin",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/raiponce-tangled-spin-ref"
+      },
+      {
+        "name": "Ratatouille : L’Aventure Totalement Toquée de Rémy​",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/ratatouille-the-adventure"
+      },
+      {
+        "name": "Sleeping Beauty Castle",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/sleeping-beauty-castle"
+      },
+      {
+        "name": "Spider-Man W.E.B. Adventure",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/spiderman-web-adventure"
+      },
+      {
+        "name": "Thunder Mesa Riverboat Landing",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/thunder-mesa-riverboat-landing"
+      },
+      {
+        "name": "World Premiere",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disney-adventure-world/world-premiere"
+      },
+      {
+        "name": "La Galerie de la Belle au Bois Dormant",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/la-galerie-de-la-belle-au-bois-dormant"
+      },
+      {
+        "name": "Pirate Galleon",
+        "url": "https://www.disneylandparis.com/en-int/attractions/disneyland-park/pirate-galleon"
+      }
+    ]
+  }
+}

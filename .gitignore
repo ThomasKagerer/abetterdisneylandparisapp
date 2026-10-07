@@ -1,0 +1,18 @@
+osm-source.json
+osm-source.xml
+disney-page.html
+.openai/
+*.tar.gz
+
+# Local caches and private runtime data
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.pem

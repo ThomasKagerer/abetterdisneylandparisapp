@@ -1,0 +1,13 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(__dirname+'/../dist/app.js','utf8'),waits=new Map(),ctx={waits,waitsFailed:false,navigator:{onLine:true},Date,DisneyWaits:require('../dist/wait-times.js'),esc:s=>String(s)};vm.createContext(ctx);
+vm.runInContext(source.slice(source.indexOf('function waitInfo('),source.indexOf('let queueCheckin=null;')),ctx);
+vm.runInContext(source.slice(source.indexOf('function waitBadge('),source.indexOf('\n',source.indexOf('function waitBadge('))),ctx);
+const ride={queueTimes:{parkId:28,rideId:10848}},now=new Date().toISOString();
+waits.set('28:10848',{status:'OPERATING',minutes:30,updatedAt:now});waits.set('28:10849',{status:'OPERATING',minutes:0,updatedAt:now});
+assert.match(ctx.waitBadge(ride),/Normal: 30 Min/);ctx.appSettings={singleRiderAlerts:true};assert(ctx.waitBadge(ride).indexOf('Single Rider: 0 Min')<ctx.waitBadge(ride).indexOf('Normal: 30 Min'));ctx.appSettings.singleRiderAlerts=false;assert(ctx.waitBadge(ride).indexOf('Normal: 30 Min')<ctx.waitBadge(ride).indexOf('Single Rider: 0 Min'));assert.match(ctx.waitBadge(ride),/Single Rider: 0 Min/);
+waits.set('28:10849',{status:'CLOSED',minutes:0,updatedAt:now});assert.match(ctx.waitBadge(ride),/Single Rider: Geschlossen/);assert.doesNotMatch(ctx.waitBadge(ride),/Single Rider: 0 Min/);
+waits.delete('28:10849');assert.match(ctx.waitBadge(ride),/Single Rider: Wartezeit nicht verfügbar/);
+assert.equal(ctx.singleRiderInfo({queueTimes:{parkId:4,rideId:25}}),null);
+ctx.waitsFailed=true;waits.set('28:10849',{status:'OPERATING',minutes:10,updatedAt:now});assert.equal(ctx.singleRiderInfo(ride).kind,'stale');
+const catalog=JSON.parse(fs.readFileSync(__dirname+'/../dist/park-data.json')),mapped=catalog.rides.filter(r=>ctx.singleRiderInfo(r)!==null);assert.equal(mapped.length,9);
+console.log('Passed: independent Single Rider IDs, zero, closed, missing, stale, nine catalog mappings and standard queue isolation.');

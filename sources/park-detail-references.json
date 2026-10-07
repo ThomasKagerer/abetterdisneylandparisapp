@@ -1,0 +1,21 @@
+{
+  "reviewed": "2026-10-07",
+  "userReference": "Three entrance/Earffel Tower/Hollywood Tower reference photos supplied in this task; photos remain private and are not app textures.",
+  "references": [
+    {
+      "url": "https://fans.disneylandparis.com/en/happy-train-part-3/",
+      "used": "Main Street Station Victorian facade, clock pediment, elevated underpass and metal train canopy; official cached gallery also inspected."
+    },
+    {
+      "url": "https://www.garesetconnexions.sncf/fr/gares-services/marne-vallee-chessy",
+      "used": "Official station identity and public entrances."
+    },
+    {
+      "url": "https://www.iledefrance-mobilites.fr/en/actualites/nouvelle-ligne-de-bus-desserte-de-villages-nature-77",
+      "used": "Primary published photo reference for the green glass arch, red cylindrical columns and station clock."
+    }
+  ],
+  "positions": "OSM-source.json footprints and entrance locations; visible rails from OSM railway ways. Underground railway lines excluded except the explicitly elevated Main Street covered bridge.",
+  "geometry": "Photo-informed decorative mesh approximations, not photogrammetry or an architectural survey. Materials are lightweight vertex colours; no faces from user photos or remote image textures.",
+  "routing": "No changes to park-data.json, navigation endpoints, walking graph or GPS behaviour."
+}

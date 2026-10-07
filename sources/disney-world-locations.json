@@ -1,0 +1,61 @@
+{
+  "retrieved": "2026-10-07",
+  "destinationsSource": "https://disneyparks.disney.go.com/ca/disney-vacations/",
+  "coordinateScope": "Approximate location within each resort, not a walking entrance. Worldwide display only; no remote park geometry.",
+  "places": [
+    {
+      "id": "paris",
+      "name": "Disneyland Paris",
+      "coordinates": [
+        2.77603755,
+        48.87319542
+      ],
+      "source": "https://www.openstreetmap.org/way/1359852391"
+    },
+    {
+      "id": "california",
+      "name": "Disneyland Resort",
+      "coordinates": [
+        -117.9197351,
+        33.8136512
+      ],
+      "source": "https://www.openstreetmap.org/relation/5586855"
+    },
+    {
+      "id": "florida",
+      "name": "Walt Disney World Resort",
+      "coordinates": [
+        -81.5811944,
+        28.4225812
+      ],
+      "source": "https://www.openstreetmap.org/way/43287326"
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo Disney Resort",
+      "coordinates": [
+        139.8814172,
+        35.6326586
+      ],
+      "source": "https://www.openstreetmap.org/way/1282875870"
+    },
+    {
+      "id": "hong-kong",
+      "name": "Hong Kong Disneyland Resort",
+      "coordinates": [
+        114.0409846,
+        22.3130698
+      ],
+      "source": "https://www.openstreetmap.org/way/377094298"
+    },
+    {
+      "id": "shanghai",
+      "name": "Shanghai Disney Resort",
+      "coordinates": [
+        121.6562825,
+        31.1462523
+      ],
+      "source": "https://www.openstreetmap.org/way/494725605"
+    }
+  ]
+}

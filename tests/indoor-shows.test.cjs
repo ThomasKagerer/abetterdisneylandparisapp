@@ -1,0 +1,16 @@
+'use strict';
+const assert=require('node:assert/strict'),shows=require('../dist/show-times.js'),push=require('../server/push/decisions.cjs');
+const now=Date.parse('2026-10-06T12:00:00+02:00'),at=m=>new Date(now+m*60000).toISOString(),ride={id:'s',name:'Indoor Show',category:'show',eventSetting:'indoor',themeparksId:'live',node:0};
+const live={status:'OPERATING',showtimes:[{startTime:at(20)}]},router={snap:()=>({node:0,distance:0}),tree:()=>({ds:[360]})},position={latlng:[48.86,2.78],accuracy:5};
+assert(shows.canAttendToday(live,now,now,5,ride));assert(shows.canAttendToday(live,now+5*60000,now,5,ride),'Exact last departure fits with ten minutes before the show');assert(!shows.canAttendToday(live,now+5*60000+1,now,5,ride),'One millisecond after last walking departure is too late');
+assert(shows.hasRemainingToday(live,now+10*60000,now,ride));assert(!shows.hasRemainingToday(live,now+10*60000+1,now,ride),'Indoor stops being reachable after start minus ten minutes');
+assert.equal(shows.arrivalDeadline(now+20*60000,ride),now+10*60000);
+assert.equal(shows.nearby({rides:[ride]},new Map([['live',live]]),router,position,now,now).length,1);
+assert.equal(shows.nearby({rides:[ride]},new Map([['live',live]]),router,position,now+5*60000+1,now).length,0);
+live.showtimes.unshift({startTime:at(5)});assert.equal(shows.nearby({rides:[ride]},new Map([['live',live]]),router,position,now,now)[0].start,now+20*60000,'Missed early indoor show yields later performance');
+live.showtimes=[{startTime:at(5)}];const all=shows.allToday({rides:[ride]},new Map([['live',live]]),router,position,now,now);assert(all[0].tooLate);assert.equal(all[0].arriveBy,now-5*60000);
+const outdoor={...ride,eventSetting:'outdoor'};assert(shows.canAttendToday(live,now,now,5,outdoor),'Outdoor retains existing admission grace');
+const state={context:{at:now/1000,candidates:[{id:'s',meters:360}]}};
+live.showtimes=[{startTime:at(20)}];let notices=push.candidates(state,{rides:[ride]},new Map(),new Map([['live',live]]),now,{});assert.equal(notices.length,1);assert.equal(notices[0].expires,now+10*60000);assert(notices[0].body.includes('Indoor: 10 Min. vorher'));
+assert.equal(push.candidates(state,{rides:[ride]},new Map(),new Map([['live',live]]),now+5*60000+1,{}).length,0);
+console.log('Passed: indoor 10-minute arrival with walking time and exact cutoffs, next performance selection, missed admission label, outdoor grace and matching push deadline.');

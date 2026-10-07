@@ -1,0 +1,21 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const app=fs.readFileSync(require.resolve('../dist/app.js'),'utf8');
+const data=JSON.parse(fs.readFileSync(require.resolve('../dist/park-data.json'),'utf8'));
+const ratings=require('../dist/ratings.js'),elements=new Map(),stored=new Map();
+const element=id=>{if(!elements.has(id))elements.set(id,{hidden:true,scrollTop:0,innerHTML:'',listeners:{},setAttribute(){},addEventListener(name,fn){this.listeners[name]=fn;}});return elements.get(id);};
+const ctx={Set,Map,data,DisneyRatings:ratings,pointById:new Map(data.rides.map(r=>[r.id,r])),favorites:new Set(),visited:new Set(),uninterested:new Set(),deferred:new Set(),priorityRide:null,onlyFav:false,userKey:'test',localStorage:{getItem:key=>stored.get(key),setItem:(key,value)=>stored.set(key,value)},$:element,esc:String,route:null,renderRides(){},renderPins(){},renderRoute(){},replan(){},toast(){},setupPhase:value=>{ctx.nextPhase=value;}};
+vm.createContext(ctx);vm.runInContext(app.slice(app.indexOf('function save(){'),app.indexOf('function rpc(')),ctx);
+ctx.load();assert.equal(ctx.favorites.size,0,'Fresh install starts empty');assert.equal(stored.size,0,'Opening does not persist automatic defaults');
+const [first,second]=ratings.ranked(data.rides),other=data.rides.find(r=>r.category==='show');
+stored.set('test',JSON.stringify({favorites:[first.id,other.id],visited:[first.id],defaultsVersion:0}));ctx.load();assert.deepEqual([...ctx.favorites],[first.id,other.id],'Existing favorites are preserved without merging default list');
+stored.set('test',JSON.stringify({favorites:[],defaultsVersion:0}));ctx.load();assert.equal(ctx.favorites.size,0,'Intentional empty favorites stay empty even with obsolete defaultsVersion');
+stored.set('test','broken');ctx.load();assert.equal(ctx.favorites.size,0);assert.equal(ctx.priorityRide,null);
+const push=fs.readFileSync(require.resolve('../dist/push-client.js'),'utf8');vm.runInContext(push.slice(push.indexOf('let setupFavoriteSelection='),push.indexOf('async function startOnboarding()')),ctx);
+ctx.setupFavoritesPhase();assert.equal(element('setup-favorites-step').hidden,false);assert(!element('setup-favorites-list').innerHTML.includes(' checked'),'No preselection');assert(element('setup-favorites-list').innerHTML.indexOf(first.id)<element('setup-favorites-list').innerHTML.indexOf(second.id),'Same ranking as Best Rides');
+const change=(id,checked)=>element('setup-favorites-list').listeners.change({target:{closest:()=>({dataset:{setupFavorite:id},checked})}});
+change(first.id,true);change(second.id,true);change(second.id,false);assert.equal(ctx.favorites.size,0,'Draft does not alter saved favorites');
+element('setup-favorites-save').onclick();assert.deepEqual([...ctx.favorites],[first.id]);assert.deepEqual(JSON.parse(stored.get('test')).favorites,[first.id]);assert.equal(ctx.nextPhase,true);
+ctx.setupFavoritesPhase();change(second.id,true);element('setup-favorites-skip').onclick();assert.deepEqual([...ctx.favorites],[first.id],'Skip leaves saved favorites untouched');
+ctx.setupFavoritesPhase();change(second.id,true);ctx.localStorage.setItem=()=>{throw Error('full');};ctx.nextPhase=false;element('setup-favorites-save').onclick();assert.deepEqual([...ctx.favorites],[first.id]);assert.equal(ctx.nextPhase,false,'Storage failure stays in chooser and rolls back');
+for(const language of ['fr','it','es','zh-Hans','ja','ko','ar']){const I=require('../dist/i18n.js');assert.notEqual(I.text('2 Favoriten ausgewählt',language),'2 Favoriten ausgewählt');assert.notEqual(I.text('Später auswählen',language),'Später auswählen');}
+console.log('Fresh/empty/legacy/corrupt storage, ranked unchecked choices, draft save/skip, persistence failure and all languages passed.');
