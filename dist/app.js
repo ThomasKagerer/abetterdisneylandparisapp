@@ -767,7 +767,7 @@ function syncBottomNavHeight(){if(bottomNav?.offsetHeight)document.documentEleme
 if(typeof ResizeObserver!=='undefined'&&bottomNav)new ResizeObserver(syncBottomNavHeight).observe(bottomNav);
 window.addEventListener('resize',syncBottomNavHeight);syncBottomNavHeight();
 
-const APP_BUILD=113;
+const APP_BUILD=114;
 
 let appUpdateBusy=false,latestAppBuild=null,announcedAppBuild=null;
 function renderAppVersion(){
