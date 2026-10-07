@@ -1,10 +1,18 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),I=require('../dist/i18n.js'),messages=require('../dist/i18n-messages.js'),official=require('../dist/official-names.js'),restaurant=require('../dist/restaurant-search.js');
+assert.equal(I.preferredLanguage({languages:['en-US','de-DE']}),'en');
+assert.equal(I.preferredLanguage({languages:['fr-CA','en-US']}),'fr');
+assert.equal(I.preferredLanguage({languages:['de-AT','en-US']}),'de');
+assert.equal(I.preferredLanguage({languages:['nl-NL','fr-FR']}),'en');
+assert.equal(I.preferredLanguage({language:'it-IT'}),'it');
+assert.equal(I.preferredLanguage({languages:['zh-TW']}),'zh-Hans');
+assert.equal(I.preferredLanguage({}),'en');
 const root=__dirname+'/../dist/',data=JSON.parse(fs.readFileSync(root+'park-data.json'));
-assert.deepEqual(I.languages.map(x=>x[0]),['de','fr','it','es','zh-Hans','ja','ko','ar']);
-assert.equal(I.resolve('zh-TW'),'zh-Hans');assert.equal(I.resolve('fr-CA'),'fr');assert.equal(I.resolve('en'),'de');assert.equal(I.resolve('../../ar'),'de');
+assert.deepEqual(I.languages.map(x=>x[0]),['de','en','fr','it','es','zh-Hans','ja','ko','ar']);
+assert.equal(I.resolve('zh-TW'),'zh-Hans');assert.equal(I.resolve('fr-CA'),'fr');assert.equal(I.resolve('en'),'en');assert.equal(I.resolve('../../ar'),'en');
 for(const [source,values] of messages)for(const lang of I.languages.slice(1).map(x=>x[0])){assert(values[lang]?.trim(),source+' '+lang);assert.deepEqual(new Set(values[lang].match(/\{\d+\}/g)),new Set(source.match(/\{\d+\}/g)),source+' '+lang);}
 for(const lang of I.languages.slice(1).map(x=>x[0]))for(const sample of ['Du bist offline','Gewartet: 1 Min. 20 Sek. · noch ca. 10 Min.','Heute 13:00 · in 10 Min.','Disney: Kinder, Ältere Kinder','95 Ziele · Beide Parks','Entfernungen ab Parkeingang','Vorstellung um 13:20 Uhr · Französisch · spätestens 13:10 da sein','Normal: 25 Min. Wartezeit · -16,7 %']){const translated=I.text(sample,lang);assert.notEqual(translated,sample,lang+' '+sample);assert(!/Gewartet|noch ca\.|Heute|Kinder|Ziele|Entfernungen|Vorstellung|spätestens|Wartezeit/.test(translated),translated);}
+assert.equal(I.text('Gewartet: 1 Min. 20 Sek. · noch ca. 10 Min.','en'),'Waited: 1 min 20 sec · approx. 10 min left');
 assert.equal(I.text('Disney: Alle Altersgruppen','fr'),'Disney : Tous âges');assert.equal(I.text('Queue-Times.com · Aktualisiert 12:10 Uhr (Paris)','fr'),'Queue-Times.com · Mis à jour à 12:10 (heure de Paris)');
 const castle=data.rides.find(r=>r.name==='Sleeping Beauty Castle');assert.equal(I.name(castle,'fr'),'Le Château de la Belle au Bois Dormant');assert.equal(I.name(castle,'ja'),'Sleeping Beauty Castle');assert(I.aliases(castle.id).includes('Sleeping Beauty'));for(const lang of ['de','fr','it','es'])assert.equal(Object.values(official).filter(x=>x[lang]).length,92);
 for(const row of Object.values(official))for(const lang of ['de','fr','it','es'])if(row[lang]){assert.equal(new URL(row[lang].url).host,'www.disneylandparis.com');assert.equal(row[lang].checkedAt,'2026-10-06');}
@@ -16,8 +24,9 @@ const nodes=[],picks=[],store=new Map([['disney:language','fr'],['disney-preview
 const textNode={nodeType:3,nodeValue:'Karte'},body={nodeType:1,tagName:'BODY',childNodes:[textNode],hasAttribute:()=>false};
 const picker={value:'',options:[],listeners:{},hasAttribute:()=>false,replaceChildren(...options){this.options=options;},setAttribute(){},addEventListener(name,fn){this.listeners[name]=fn;}};
 const doc={documentElement:{},body,querySelector:()=>null,querySelectorAll:()=>[picker],createElement:()=>({})};const storage={getItem:k=>store.get(k),setItem:(k,v)=>{picks.push(k);store.set(k,v);}};
-I.init(doc,storage);assert.equal(textNode.nodeValue,'Carte');assert.equal(picker.options.length,8);assert.equal(picker.options[6].textContent,'한국어');picker.value='ar';picker.listeners.change();I.apply(doc);assert.equal(doc.documentElement.dir,'rtl');assert.equal(textNode.nodeValue,'الخريطة');picker.value='de';picker.listeners.change();I.apply(doc);assert.equal(textNode.nodeValue,'Karte');assert.deepEqual([...new Set(picks)],['disney:language']);assert.equal(store.get('disney-preview:favorites'),'["ride-1"]');
+I.init(doc,{getItem(){throw Error('blocked');}});assert.equal(I.language(),'en');assert.equal(textNode.nodeValue,'Map');
+I.init(doc,storage);assert.equal(textNode.nodeValue,'Carte');assert.equal(picker.options.length,9);assert.equal(picker.options[7].textContent,'한국어');picker.value='ar';picker.listeners.change();I.apply(doc);assert.equal(doc.documentElement.dir,'rtl');assert.equal(textNode.nodeValue,'الخريطة');picker.value='de';picker.listeners.change();I.apply(doc);assert.equal(textNode.nodeValue,'Karte');assert.deepEqual([...new Set(picks)],['disney:language']);assert.equal(store.get('disney-preview:favorites'),'["ride-1"]');
 // RTL page back gesture mirrors; vertical sheet and geographic gestures retain their axes.
 const ctx={document:{documentElement:{dir:'rtl'},addEventListener(){}},innerWidth:402};ctx.globalThis=ctx;vm.createContext(ctx);vm.runInContext(fs.readFileSync(root+'surfaces.js','utf8').replace("if(typeof document!=='undefined')init(document,window);",''),ctx);assert(ctx.DisneySurfaces.gesture('page',{x:398,y:120},{x:260,y:125}));assert(!ctx.DisneySurfaces.gesture('page',{x:3,y:120},{x:150,y:125}));assert(ctx.DisneySurfaces.gesture('sheet',{x:180,y:120,atTop:true},{x:180,y:220}));
 for(const lang of I.languages.slice(1).map(x=>x[0])){const manifest=JSON.parse(fs.readFileSync(root+`manifest-${lang}.webmanifest`));assert.equal(manifest.lang,lang);assert.equal(manifest.id,'/');assert.equal(manifest.start_url,'/App/');assert.equal(manifest.dir,lang==='ar'?'rtl':'ltr');}
-I.setLanguage('de',{notify:false});console.log('Passed: eight semantic catalogues, placeholders, nested live labels, official names and provenance, safe HTML, multilingual cuisine search, persistent preference, untouched route data, RTL back gestures and installation manifests.');
+I.setLanguage('de',{notify:false});console.log('Passed: nine semantic catalogues, placeholders, nested live labels, official names and provenance, safe HTML, multilingual cuisine search, persistent preference, untouched route data, RTL back gestures and installation manifests.');

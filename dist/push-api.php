@@ -2,7 +2,7 @@
 // Called only after index.php verifies the signed-in active user.
 declare(strict_types=1);
 function disney_push_dir(): string { return '/var/lib/weletapi-disney-push'; }
-function disney_push_language($value): string { return in_array($value,['de','fr','it','es','zh-Hans','ja','ko','ar'],true)?$value:'de'; }
+function disney_push_language($value): string { return in_array($value,['en','de','fr','it','es','zh-Hans','ja','ko','ar'],true)?$value:'en'; }
 function disney_push_valid_subscription(array $s): bool {
     $u=parse_url($s['endpoint'] ?? '');$host=strtolower($u['host'] ?? '');
     $allowed=$host==='web.push.apple.com'||substr($host,-19)==='.web.push.apple.com'||$host==='fcm.googleapis.com'||$host==='updates.push.services.mozilla.com';
@@ -26,7 +26,7 @@ function disney_push_response(string $user,string $csrf): void {
         if(!in_array($action,['subscribe','context','test'],true)||($action!=='subscribe'&&!$old)){http_response_code(400);echo '{"error":"Action"}';return;}
         $state=$old ?? ['user'=>$user,'subscription'=>$s,'createdAt'=>time(),'context'=>null];
         if($action==='subscribe')$state['subscription']=$s;
-        $state['language']=disney_push_language($input['language'] ?? ($state['language'] ?? 'de'));
+        $state['language']=disney_push_language($input['language'] ?? ($state['language'] ?? 'en'));
         if(is_int($input['appBuild'] ?? null)&&$input['appBuild']>0&&$input['appBuild']<1000000)$state['appBuild']=$input['appBuild'];
         if($action==='context'){
             $context=is_array($input['context'] ?? null)?$input['context']:[];$catalog=json_decode(file_get_contents(__DIR__.'/ride-summary.json'),true);$ids=array_column($catalog['rides'],'id');$entries=[];

@@ -2,13 +2,13 @@
   "id": "/",
   "name": "a better Disneyland Paris App",
   "short_name": "a better DLP App",
-  "description": "Ride-Favoriten, kurze Wege und Live-Navigation in Disneyland Paris.",
+  "description": "Ride favorites, short walks and live navigation at Disneyland Paris.",
   "start_url": "/App/",
   "scope": "/App/",
   "display": "standalone",
   "background_color": "#192f68",
   "theme_color": "#192f68",
-  "lang": "de",
+  "lang": "en",
   "icons": [
     {
       "src": "icon-192.png",

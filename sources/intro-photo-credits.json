@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-07",
+  "changes": "Resized Wikimedia previews; entrance and Frontierland display cropped in cards. Fantasyland retains its complete panorama.",
+  "images": [
+    {
+      "file": "entrance.jpg",
+      "title": "Entrance Disneyland Paris (2026-08-02)-2",
+      "author": "Sneeuwvlakte",
+      "source": "https://commons.wikimedia.org/wiki/File:Entrance_Disneyland_Paris_(2026-08-02)-2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "file": "frontierland.jpg",
+      "title": "Disneyland Paris Frontierland panorama",
+      "author": "Rémi Moreels",
+      "source": "https://commons.wikimedia.org/wiki/File:Disneyland_Paris_Frontierland_panorama.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 1280,
+      "height": 457
+    },
+    {
+      "file": "fantasyland.jpg",
+      "title": "Disneyland Paris Fantasyland Panorama",
+      "author": "CetusCetus (Helen Alexander)",
+      "source": "https://commons.wikimedia.org/wiki/File:Disneyland_Paris_Fantasyland_Panorama.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "width": 1280,
+      "height": 209
+    }
+  ]
+}

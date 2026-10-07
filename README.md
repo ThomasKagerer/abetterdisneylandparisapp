@@ -781,3 +781,20 @@ WC, Trinkwasser und Restaurants sind in Wegekarte und 3D standardmäßig aus. Dr
 - Dezente Einblendung beim Laden/Scrollen und Sternbewegung, mit vollständiger Berücksichtigung von prefers-reduced-motion. Ohne JavaScript bleibt der Einführungstext lesbar; Karten werden nur bei verfügbarem Observer für die Einblendung vorbereitet.
 - Acht bedeutungsgetreu übersetzte Sprachen, englischer Produktname bewusst unverändert. Mobile Prüfung 402×874 für alle acht Sprachen: keine horizontale Überbreite, korrekte Titel/Gratis-/Registrierungslabels, Arabisch RTL. Funktionskarten tatsächlich beim Scrollen eingeblendet.
 - Öffentliches Info-Panel nennt für den App-Start korrekt nur die benötigte Verbindung; veralteter Satz mit weletapi-Login entfernt. Keine Änderung der Serverrechte oder API-Identität.
+
+
+### English and park photography (Build 113)
+
+Website and app now support nine languages including English. First launch uses the primary browser language when supported, otherwise English. A saved manual choice takes priority. If browser storage is blocked, the browser language still applies. English includes the UI, dynamic navigation/wait labels, offline page, push and installation manifest; German has its own localized manifest.
+
+The introduction highlights working walking navigation with a tongue-in-cheek comparison, keeps the app preview prominent, and adds three CC park photographs. Authors, source links, licenses and resize/crop notes are available on the page and in `sources/intro-photo-credits.json`. Fantasyland retains its complete panorama.
+
+
+## Build 112 · Echter Download-Fortschritt
+
+- Startbildschirm zeigt einen nativen Fortschrittsbalken für die tatsächlich empfangenen Kartendaten. Erwartete unkomprimierte Länge von park-data.json?v=42: 8.494.350 Bytes, auf weletapi bestätigt. Komprimierte Content-Length wird nicht als Nenner verwendet. 100 % erst nach vollständiger, gültiger JSON-Antwort; anschließender Kartenaufbau ist eine separate Phase.
+- Sechs spielerische Disney-Meldungen wechseln alle vier Sekunden; Fortschritt und Meldungen in acht übersetzten Sprachen.
+- Die bisherige 15-Sekunden-Gesamtfrist entfällt. Abbruch erst nach 45 Sekunden ohne neue Daten; jeder empfangene Chunk erneuert die Frist. Der Start-Watchdog erhält ebenfalls Aktivitätssignale. Kein künstlich hochgezählter Fortschritt.
+- Auf weletapi gegen eine Kopie der tatsächlich laufenden Build-110-Dateien geprüft: gestreamte Prozente, UTF-8 über Chunkgrenzen, wechselnde Meldungen, erneuerte Inaktivitätsfrist, festhängender Abruf, Fallback ohne Stream, HTTP-Fehler, Abschluss, Startfehler und Worker-Deadline. Syntax und acht Sprachfassungen bestanden.
+- Nach ausdrücklicher Freigabe auf weletapi veröffentlicht: sechs Dateien atomar ersetzt, vorheriger Stand per SHA-256 abgeglichen und gesichert unter `/mnt/backup/docker-projects/disney-public/backups/startup-progress112-20261007-182841`. Start- und Downloadprüfungen gegen die Live-Dateien bestanden; Container healthy, null Neustarts. Veröffentlichung basiert auf dem tatsächlich laufenden Build 110; andere lokale Build-111-Änderungen wurden nicht mitveröffentlicht.
+- Öffentliche Endprüfung: Start-Markup und Versions-API Build 112, startup.js/app.js/i18n-messages.js sowie Root-Worker bytegenau abgeglichen. Container weiterhin healthy mit null Neustarts.

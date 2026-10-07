@@ -1,6 +1,8 @@
 {
-  "build": 110,
+  "build": 113,
   "items": [
-    "Die neue Startseite und die App tragen jetzt den Namen a better Disneyland Paris App."
+    "Download-Fortschritt mit lustigen Disney-Meldungen und mehr Geduld bei langsamem Netz.",
+    "Englisch für Webseite und App. Die Browsersprache wird automatisch erkannt; sonst startet die App auf Englisch.",
+    "Navigation im Vordergrund und mehr Parkfotos auf der Startseite."
   ]
 }

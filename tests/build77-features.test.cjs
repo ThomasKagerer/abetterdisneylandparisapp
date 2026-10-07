@@ -1,4 +1,6 @@
 'use strict';
+// This fixture checks the original German labels explicitly.
+require('../dist/i18n.js').setLanguage('de',{notify:false});
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const preferences=require('../dist/preferences.js'),chart=require('../dist/chart-interaction.js'),surfaces=require('../dist/surfaces.js'),swipe=require('../dist/swipe-list.js'),waits=require('../dist/wait-times.js'),{updateNotice,candidates}=require('../server/push/decisions.cjs'),{allToday}=require('../dist/show-times.js');
 assert.deepEqual(preferences.load({getItem:()=>null},'a'),{singleRiderAlerts:false,child:null});assert.equal(preferences.normalize({child:{age:7,height:125}}).child.height,125);assert.equal(preferences.normalize({child:{age:NaN,height:125}}).child,null);assert.equal(preferences.normalize(null)?.child,null);

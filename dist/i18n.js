@@ -1,14 +1,14 @@
 /* Reviewed on-device localization. No text, search, GPS or profile is sent to a translation service. */
 (function(root){'use strict';
 const messages=root.DisneyMessages||(typeof module!=='undefined'?require('./i18n-messages.js'):[]),official=root.DisneyOfficialNames||(typeof module!=='undefined'?require('./official-names.js'):{});
-const languages=[['de','Deutsch','de-DE'],['fr','Français','fr-FR'],['it','Italiano','it-IT'],['es','Español','es-ES'],['zh-Hans','简体中文','zh-CN'],['ja','日本語','ja-JP'],['ko','한국어','ko-KR'],['ar','العربية','ar-u-hc-h23']];
-const valid=new Set(languages.map(x=>x[0])),key='disney:language',cache=new Map(),reverse=new Map(),nodeSources=new WeakMap();let current='de',storage=null;
+const languages=[['de','Deutsch','de-DE'],['en','English','en-GB'],['fr','Français','fr-FR'],['it','Italiano','it-IT'],['es','Español','es-ES'],['zh-Hans','简体中文','zh-CN'],['ja','日本語','ja-JP'],['ko','한국어','ko-KR'],['ar','العربية','ar-u-hc-h23']];
+const valid=new Set(languages.map(x=>x[0])),key='disney:language',cache=new Map(),reverse=new Map(),nodeSources=new WeakMap();let current='en',storage=null;
 const norm=s=>String(s).normalize('NFKC').replace(/\s+/g,' ').trim().toLocaleLowerCase('de-DE');
 const escapeRegex=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const exact=new Map(),patterns=[];
 for(const [source,values] of messages){const normalized=norm(source);if(/\{\d+\}/.test(source)){let i=0;const chunks=source.split(/\{\d+\}/);if(chunks.join('').replace(/[^\p{L}]/gu,'').length<2)continue;patterns.push({source,values,regex:new RegExp('^'+chunks.map(escapeRegex).join('(.*?)')+'$','iu'),specificity:chunks.join('').length});}else exact.set(normalized,{source,values});}
 patterns.sort((a,b)=>b.specificity-a.specificity);
-function resolve(value){const raw=String(value||'').replace('_','-');if(/^zh(?:-|$)/i.test(raw))return 'zh-Hans';const base=raw.split('-')[0].toLowerCase();return valid.has(raw)?raw:valid.has(base)?base:'de';}
+function resolve(value){const raw=String(value||'').replace('_','-');if(/^zh(?:-|$)/i.test(raw))return 'zh-Hans';const base=raw.split('-')[0].toLowerCase();return valid.has(raw)?raw:valid.has(base)?base:'en';}
 function language(){return current;}
 function locale(value=current){return languages.find(x=>x[0]===resolve(value))[2];}
 const aliasesText={'Ausgeblendete Ziele schließen':'Fenster schließen','Karteneinstellungen schließen':'Fenster schließen','Objektansicht schließen':'Zurück','Objektinfos schließen':'Zurück','Playlist schließen':'Fenster schließen','Wartezeit-Anzeige schließen':'Fenster schließen','Wartezeit-Statistik schließen':'Zurück','No rides selected':'Keine Rides ausgewählt','Route unavailable':'Route nicht verfügbar','Wrong history day':'Statistik momentan nicht verfügbar','History unavailable':'Statistik momentan nicht verfügbar','Unknown Ride ID':'Ziel nicht gefunden'};
@@ -42,7 +42,7 @@ function name(ride,lang=current){const row=official[ride?.id];if(!row)return tex
 function aliases(id){const row=official[id];return row?[row.original,row.fallback,...['de','fr','it','es'].map(l=>row[l]?.name||'')].join(' '):'';}
 function localizePoints(points){for(const point of points){if((!official[point.id]&&point.serviceType!=='water'&&!point.id.startsWith('wc-'))||Object.hasOwn(point,'originalName'))continue;Object.defineProperty(point,'originalName',{value:point.name,enumerable:true});Object.defineProperty(point,'name',{get:()=>name(point),enumerable:true,configurable:true});}}
 function sourceUrl(id,fallback){return official[id]?.[current]?.url||fallback;}
-function apply(doc=root.document){if(!doc)return;doc.documentElement.lang=current;doc.documentElement.dir=current==='ar'?'rtl':'ltr';const manifest=doc.querySelector('link[rel=manifest]');if(manifest)manifest.setAttribute('href',current==='de'?'manifest.webmanifest':`manifest-${current}.webmanifest`);const description=doc.querySelector('meta[name=description]');if(description&&!description.hasAttribute('data-i18n-ignore'))description.setAttribute('content',text('Deine Ride-Favoriten. Ein kurzer Weg durch Disneyland Paris.'));
+function apply(doc=root.document){if(!doc)return;doc.documentElement.lang=current;doc.documentElement.dir=current==='ar'?'rtl':'ltr';const manifest=doc.querySelector('link[rel=manifest]');if(manifest)manifest.setAttribute('href',current==='en'?'manifest.webmanifest':`manifest-${current}.webmanifest`);const description=doc.querySelector('meta[name=description]');if(description&&!description.hasAttribute('data-i18n-ignore'))description.setAttribute('content',text('Deine Ride-Favoriten. Ein kurzer Weg durch Disneyland Paris.'));
  const visit=node=>{if(node.nodeType===3){if(!node.nodeValue?.trim())return;let saved=nodeSources.get(node);if(!saved||saved.output!==node.nodeValue)saved={source:reverse.get(node.nodeValue)||node.nodeValue};const output=text(saved.source);if(node.nodeValue!==output)node.nodeValue=output;saved.output=output;nodeSources.set(node,saved);return;}
   if(node.nodeType!==1||['SCRIPT','STYLE','NOSCRIPT','TEXTAREA'].includes(node.tagName))return;
   for(const attr of ['aria-label','aria-description','title','placeholder','alt'])if(node.hasAttribute(attr)){const token='i18n:'+attr;let sources=nodeSources.get(node)||{};const value=node.getAttribute(attr),saved=sources[token];const source=saved&&saved.output===value?saved.source:reverse.get(value)||value,output=text(source);if(value!==output)node.setAttribute(attr,output);sources[token]={source,output};nodeSources.set(node,sources);}
@@ -52,9 +52,14 @@ function apply(doc=root.document){if(!doc)return;doc.documentElement.lang=curren
 }
 function setLanguage(value,{persist=true,notify=true}={}){current=resolve(value);cache.clear();if(persist)try{storage?.setItem(key,current);}catch{}if(root.document)apply();syncWorker();if(notify&&root.dispatchEvent&&root.CustomEvent)root.dispatchEvent(new root.CustomEvent('disneylanguagechange',{detail:{language:current}}));return current;}
 function syncWorker(){const worker=root.navigator?.serviceWorker;if(!worker)return;const send=()=>worker.controller?.postMessage({type:'disney-language',language:current});send();worker.ready?.then(reg=>reg.active?.postMessage({type:'disney-language',language:current})).catch(()=>{});}
-function init(doc=root.document,store=root.localStorage){storage=store;try{current=resolve(store?.getItem(key)||root.navigator?.languages?.find(x=>valid.has(x.split('-')[0])||/^zh/.test(x))||'de');}catch{current='de';}
+function preferredLanguage(navigator=root.navigator){
+ const preferences=navigator?.languages?.length?navigator.languages:[navigator?.language];
+ // The primary browser language wins; an unsupported language falls back to English.
+ return resolve(preferences[0]);
+}
+function init(doc=root.document,store=root.localStorage){storage=store;let saved=null;try{saved=store?.getItem(key);}catch{}current=valid.has(saved)?saved:preferredLanguage();
  for(const select of doc.querySelectorAll('[data-language-picker]')){select.replaceChildren(...languages.map(([code,label])=>{const option=doc.createElement('option');option.value=code;option.lang=code;option.dir=code==='ar'?'rtl':'ltr';option.textContent=label;return option;}));select.setAttribute('data-i18n-ignore','');select.value=current;select.addEventListener('change',()=>setLanguage(select.value));}apply(doc);syncWorker();root.navigator?.serviceWorker?.addEventListener('controllerchange',syncWorker);
 }
-const api={languages,resolve,language,locale,text,html,number,cuisine,name,aliases,sourceUrl,localizePoints,setLanguage,apply,init,messageCount:messages.length};root.DisneyI18n=api;if(typeof module!=='undefined')module.exports=api;
+const api={languages,resolve,preferredLanguage,language,locale,text,html,number,cuisine,name,aliases,sourceUrl,localizePoints,setLanguage,apply,init,messageCount:messages.length};root.DisneyI18n=api;if(typeof module!=='undefined')module.exports=api;
 if(typeof document!=='undefined'){try{init(document,root.localStorage);}catch{storage=null;init(document,null);}root.addEventListener('DOMContentLoaded',()=>apply(document));}
 })(typeof globalThis!=='undefined'?globalThis:this);

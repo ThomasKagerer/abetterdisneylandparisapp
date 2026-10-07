@@ -16,7 +16,7 @@ function event(name,extra={}){let promise;handlers[name]({...extra,waitUntil:p=>
  const source=fs.readFileSync(root+'intro.js','utf8');let replace;
  vm.runInNewContext(source,{navigator:{standalone:true},window:{},location:{search:'?view=info',replace:u=>replace=u}});assert.equal(replace,'/App/?view=info','existing iOS Home Screen app enters /App');
  const html=fs.readFileSync(root+'introduction.html','utf8');assert.equal((html.match(/<h1\b/g)||[]).length,1);assert(html.includes('rel="canonical" href="'+origin+'/"'));assert(html.includes('data-i18n-ignore name="description"'));assert(!html.includes('rel="manifest"'),'intro must not install a separate app');
- const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);assert.equal(schema.url,origin+'/App/');assert.equal(schema.inLanguage.length,8);assert.equal(schema.offers.price,'0');
+ const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);assert.equal(schema.url,origin+'/App/');assert.equal(schema.inLanguage.length,9);assert.equal(schema.offers.price,'0');
  assert(fs.readFileSync(root+'sitemap.xml','utf8').includes('<loc>'+origin+'/</loc>'));
  console.log('Passed: app path/cache isolation, existing worker and installation identity, notification destinations, Home Screen migration and indexable intro metadata.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

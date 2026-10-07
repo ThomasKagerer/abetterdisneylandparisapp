@@ -4,7 +4,7 @@ import json, re, unicodedata
 from pathlib import Path
 from urllib.parse import unquote
 ROOT=Path(__file__).resolve().parent
-LANGS=['fr','it','es','zh-Hans','ja','ko','ar']
+LANGS=['fr','it','es','zh-Hans','ja','ko','ar','en']
 def canonical(s):
  s=unquote(s).strip().removesuffix('-app').removesuffix('-ref')
  return ALIASES.get(s,s)
@@ -21,7 +21,7 @@ def build():
   for line_no,line in enumerate(file.read_text().splitlines(),1):
    if not line.strip() or line.startswith('#'):continue
    columns=line.split('|')
-   if len(columns)!=8:raise ValueError(f'{file}:{line_no}: expected source and seven translations, got {len(columns)}')
+   if len(columns)!=len(LANGS)+1:raise ValueError(f'{file}:{line_no}: expected source and eight translations, got {len(columns)}')
    if any(not x.strip() for x in columns):raise ValueError(f'{file}:{line_no}: empty translation')
    source,*translations=columns
    key=" ".join(unicodedata.normalize("NFKC",source).split()).casefold()
@@ -33,6 +33,7 @@ def build():
    messages.append([source,dict(zip(LANGS,translations))])
  manifest=json.loads((ROOT/'dist/manifest.webmanifest').read_text())
  descriptions=dict(messages)['Ride-Favoriten, kurze Wege und Live-Navigation in Disneyland Paris.']
+ (ROOT/'dist/manifest-de.webmanifest').write_text(json.dumps({**manifest,'lang':'de','dir':'ltr','description':'Ride-Favoriten, kurze Wege und Live-Navigation in Disneyland Paris.'},ensure_ascii=False,separators=(',',':'))+'\n')
  for lang in LANGS:
   localized={**manifest,'lang':lang,'dir':'rtl' if lang=='ar' else 'ltr','description':descriptions[lang]}
   (ROOT/f'dist/manifest-{lang}.webmanifest').write_text(json.dumps(localized,ensure_ascii=False,separators=(',',':'))+'\n')
