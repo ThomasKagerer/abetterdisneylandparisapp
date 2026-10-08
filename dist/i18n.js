@@ -5,6 +5,8 @@ const languages=[['de','Deutsch','de-DE'],['en','English','en-GB'],['fr','Franç
 const valid=new Set(languages.map(x=>x[0])),key='disney:language',cache=new Map(),reverse=new Map(),nodeSources=new WeakMap();let current='en',storage=null;
 const norm=s=>String(s).normalize('NFKC').replace(/\s+/g,' ').trim().toLocaleLowerCase('de-DE');
 const escapeRegex=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+// English HTML is rendered for crawlers; recover canonical sources for browser localization.
+for(const [source,values] of messages)if(values.en&&!/\{\d+\}/.test(source)&&values.en!==source&&!reverse.has(values.en))reverse.set(values.en,source);
 const exact=new Map(),patterns=[];
 for(const [source,values] of messages){const normalized=norm(source);if(/\{\d+\}/.test(source)){let i=0;const chunks=source.split(/\{\d+\}/);if(chunks.join('').replace(/[^\p{L}]/gu,'').length<2)continue;patterns.push({source,values,regex:new RegExp('^'+chunks.map(escapeRegex).join('(.*?)')+'$','iu'),specificity:chunks.join('').length});}else exact.set(normalized,{source,values});}
 patterns.sort((a,b)=>b.specificity-a.specificity);
