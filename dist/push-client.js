@@ -1,16 +1,38 @@
 /* Push is opt-in. Send candidate IDs/times, never GPS coordinates or child data. */
 let pushSubscription=null,pushConfig=null,pushReady=false,pushSyncBusy=false,pushSyncPending=false,pushSyncAt=0,onboardingLocation=false,onboardingRequested=false,pushRegistration=null,pushEnabling=false,onboardingAutoContinue=false;
 const pushPreview=()=>(location.pathname==='/'||location.pathname==='/index.html'||location.pathname==='/App/')&&location.hostname!=='abetterdisneylandparisapp.weletapi.com';
+function devicePlatform(nav=navigator){
+ const ua=nav.userAgent||'';
+ if(/Android/i.test(ua))return 'android';
+ if(/iPad|iPhone|iPod/i.test(ua)||/Macintosh/i.test(ua)&&nav.maxTouchPoints>1)return 'ios';
+ return 'other';
+}
+function installInstructions(){
+ return devicePlatform()==='ios'?'Safari: Teilen → Zum Home-Bildschirm → als Web-App hinzufügen. Danach a better Disneyland Paris App über das neue App-Symbol öffnen.':devicePlatform()==='android'?'Android: Im Browser-Menü „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen. Danach die App über das neue Symbol öffnen.':'Im Browser-Menü „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen. Danach a better Disneyland Paris App über das App-Symbol öffnen.';
+}
+function pushUnavailableHelp(){
+ if(devicePlatform()==='ios'&&!isInstalledApp())return 'iPhone: a better Disneyland Paris App zuerst zum Home-Bildschirm hinzufügen und von dort öffnen.';
+ return devicePlatform()==='android'?'Dieser Browser unterstützt keine Push-Mitteilungen. Öffne die App auf Android in Chrome und prüfe die Benachrichtigungsfreigaben.':'Dieser Browser unterstützt keine Push-Mitteilungen. Nutze einen Browser mit Web-Push-Unterstützung.';
+}
+function pushDeniedHelp(){
+ if(devicePlatform()==='ios')return 'Push nicht erlaubt. In den iPhone-Einstellungen unter Mitteilungen freigeben; Disney als installierte App öffnen.';
+ return devicePlatform()==='android'?'Push nicht erlaubt. Prüfe die Website-Berechtigungen im Browser und die Android-Benachrichtigungen für den Browser oder die installierte App.':'Push nicht erlaubt. Prüfe die Benachrichtigungsfreigabe in den Browser-Einstellungen.';
+}
+function refreshPlatformHelp(){
+ const translate=typeof DisneyI18n==='undefined'?String:DisneyI18n.text;
+ $('setup-install-instructions').textContent=translate(installInstructions());
+ $('install-text').textContent=translate(installInstructions());
+}
 function pushSupported(){return 'serviceWorker'in navigator&&'PushManager'in window&&'Notification'in window;}
 function pushStatus(message){$('push-status').textContent=(typeof DisneyI18n==='undefined'?String:DisneyI18n.text)(message);$('setup-push-status').textContent=(typeof DisneyI18n==='undefined'?String:DisneyI18n.text)(message);}
 async function pushRequest(action,extra={}){const response=await fetch('index.php?push=1',{method:'POST',headers:{'Content-Type':'application/json','X-Disney-CSRF':pushConfig.csrf},body:JSON.stringify({action,language:typeof DisneyI18n==='undefined'?'en':DisneyI18n.language(),appBuild:typeof APP_BUILD==='number'?APP_BUILD:0,subscription:pushSubscription.toJSON(),...extra}),cache:'no-store',redirect:'error'});if(!response.ok)throw Error(response.status===401||response.status===403?(location.hostname==='abetterdisneylandparisapp.weletapi.com'?'Verbindung erneuern: Bitte die App neu laden.':'Bitte erneut bei weletapi anmelden.'):response.status===429?'Bitte kurz warten und erneut versuchen.':'Push-Verbindung momentan nicht verfügbar.');return response.json();}
 function renderPushControls(){const on=!!pushSubscription;for(const id of ['enable-push','setup-push']){$(id).textContent=(typeof DisneyI18n==='undefined'?String:DisneyI18n.text)(on?'✓ Push aktiviert':'Push aktivieren');$(id).disabled=on||pushEnabling||!pushSupported()||pushPreview();}$('disable-push').hidden=!on;$('test-push').hidden=!on;finishSetupIfReady();}
 function pushTimeout(promise,ms=12000){return Promise.race([promise,new Promise((_,reject)=>setTimeout(()=>reject(Error('Der Browser antwortet nicht. Bitte erneut versuchen.')),ms))]);}
-async function initPush(){try{if(pushPreview()){pushStatus('Push ist in der lokalen Vorschau nicht verbunden.');return;}if(!pushSupported()){pushStatus('iPhone: a better Disneyland Paris App zuerst zum Home-Bildschirm hinzufügen und von dort öffnen.');return;}const r=await pushTimeout(fetch('index.php?push=1',{cache:'no-store',redirect:'error'}),8000);if(!r.ok)throw Error('Push momentan nicht verfügbar.');pushConfig=await r.json();if(!pushConfig.publicKey)throw Error('Push wird noch eingerichtet.');const registration=await pushTimeout(navigator.serviceWorker.ready,8000);pushRegistration=registration;pushSubscription=await registration.pushManager.getSubscription();if(pushSubscription&&Notification.permission==='granted'){await pushRequest('subscribe');pushStatus('Push aktiv · Nähe gilt für deinen letzten Parkbereich bis zu 15 Minuten.');}else{pushSubscription=null;pushStatus(Notification.permission==='denied'?'Push ist in den Geräteeinstellungen gesperrt.':'Aktivieren, um Show-Hinweise und kurze Wartezeiten zu erhalten.');}pushReady=true;}catch(e){pushStatus(e.message);}finally{renderPushControls();}}
+async function initPush(){try{if(pushPreview()){pushStatus('Push ist in der lokalen Vorschau nicht verbunden.');return;}if(!pushSupported()){pushStatus(pushUnavailableHelp());return;}const r=await pushTimeout(fetch('index.php?push=1',{cache:'no-store',redirect:'error'}),8000);if(!r.ok)throw Error('Push momentan nicht verfügbar.');pushConfig=await r.json();if(!pushConfig.publicKey)throw Error('Push wird noch eingerichtet.');const registration=await pushTimeout(navigator.serviceWorker.ready,8000);pushRegistration=registration;pushSubscription=await registration.pushManager.getSubscription();if(pushSubscription&&Notification.permission==='granted'){await pushRequest('subscribe');pushStatus('Push aktiv · Nähe gilt für deinen letzten Parkbereich bis zu 15 Minuten.');}else{pushSubscription=null;pushStatus(Notification.permission==='denied'?pushDeniedHelp():'Aktivieren, um Show-Hinweise und kurze Wartezeiten zu erhalten.');}pushReady=true;}catch(e){pushStatus(e.message);}finally{renderPushControls();}}
 async function enablePush(){
  if(pushEnabling)return;
  if(!pushReady||!pushRegistration||!pushConfig?.publicKey){pushStatus('Push wird vorbereitet. Bitte danach erneut auf „Push aktivieren“ tippen.');await initPush();return;}
- if(!pushSupported()){pushStatus('Öffne a better Disneyland Paris App über das Symbol auf dem Home-Bildschirm.');return;}
+ if(!pushSupported()){pushStatus(pushUnavailableHelp());return;}
  pushEnabling=true;pushStatus('Bitte die Push-Freigabe deines Geräts bestätigen …');renderPushControls();
  try{
   const key=Uint8Array.from(atob(pushConfig.publicKey.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
@@ -19,7 +41,7 @@ async function enablePush(){
   pushSubscription=await pushTimeout(subscriptionPromise);
   await pushTimeout(pushRequest('subscribe'));
   pushStatus('Push aktiviert. Mit „Test senden“ kannst du die Zustellung prüfen.');await syncPush(true);
- }catch(e){pushSubscription=null;pushStatus(e.name==='NotAllowedError'?'Push nicht erlaubt. In den iPhone-Einstellungen unter Mitteilungen freigeben; Disney als installierte App öffnen.':e.message||'Push konnte nicht aktiviert werden. Bitte erneut versuchen.');}
+ }catch(e){pushSubscription=null;pushStatus(e.name==='NotAllowedError'?pushDeniedHelp():e.message||'Push konnte nicht aktiviert werden. Bitte erneut versuchen.');}
  finally{pushEnabling=false;renderPushControls();}
 }
 async function syncPush(force=false){if(pushSyncBusy){if(force)pushSyncPending=true;return;}if(!pushSubscription||!pushConfig||!data||!activeSession||pushSyncBusy||!navigator.onLine||(!force&&Date.now()-pushSyncAt<30000))return;pushSyncBusy=true;try{const candidates=[],active=position&&position.accuracy<=80&&Date.now()-lastFix<45000&&insidePark(position.latlng),start=active?router.snap(position.latlng):null;const next=pointById.get(route?.order.find(id=>id.startsWith('ride-')&&!uninterested.has(id)&&targetAvailable(pointById.get(id))));if(active&&start.distance<=90){const distances=router.tree(start.node).ds;for(const r of data.rides){if(!parkMatches(r)||uninterested.has(r.id)||!targetAvailable(r))continue;const meters=distances[r.node]+(r.offset||0);if(!Number.isFinite(meters))continue;const favorite=favorites.has(r.id)&&!visited.has(r.id)&&!deferred.has(r.id)&&r.id!==next?.id;const extra=next?(distances[r.node]+router.tree(r.node).ds[next.node]-distances[next.node])/72:meters/72;if((r.category==='show'&&!r.approximateArea&&!r.reservedViewing&&meters<=800)||(favorite&&meters<=1200&&extra<=10))candidates.push({id:r.id,meters:Math.round(meters/25)*25,extraWalkingMinutes:Number.isFinite(extra)?Math.max(0,extra):null,favorite});}}await pushRequest('context',{context:{active:!!active,candidates,includeSingleRider:typeof appSettings!=='undefined'&&appSettings.singleRiderAlerts===true}});pushSyncAt=Date.now();}catch(e){pushStatus(e.message);}finally{pushSyncBusy=false;if(pushSyncPending){pushSyncPending=false;syncPush(true);}}}
@@ -31,7 +53,7 @@ function openSetup(){const screen=$('setup-dialog');screen.hidden=false;if(typeo
 function closeSetup(){onboardingAutoContinue=false;const screen=$('setup-dialog');if(typeof screen.close==='function')screen.close();screen.removeAttribute('open');screen.hidden=true;screen.setAttribute('aria-hidden','true');document.body.classList.remove('setup-open');try{localStorage.setItem(`${userKey}:setup-v2`,'done');}catch{}homeView('map');}
 
 function setupChildPhase(){$('setup-favorites-step').hidden=true;$('setup-install-step').hidden=true;$('setup-permissions-step').hidden=true;$('setup-child-step').hidden=false;$('setup-child-error').hidden=true;$('setup-child-age').value=appSettings.child?.age??'';$('setup-child-height').value=appSettings.child?.height??'';$('setup-title').innerHTML=(typeof DisneyI18n==='undefined'?String:DisneyI18n.html)('Für eure Familie.<br>Für euren Tag.');$('setup-dialog').scrollTop=0;}
-function setupPhase(permissions){$('setup-favorites-step').hidden=true;$('setup-child-step').hidden=true;$('setup-install-step').hidden=permissions;$('setup-permissions-step').hidden=!permissions;$('setup-title').innerHTML=(typeof DisneyI18n==='undefined'?String:DisneyI18n.html)(permissions?'Dein Tag.<br>Deine kurzen Wege.':'a better Disneyland Paris App<br>Bereit für den Park.');if(permissions)initPush();}
+function setupPhase(permissions){refreshPlatformHelp();$('setup-favorites-step').hidden=true;$('setup-child-step').hidden=true;$('setup-install-step').hidden=permissions;$('setup-permissions-step').hidden=!permissions;$('setup-title').innerHTML=(typeof DisneyI18n==='undefined'?String:DisneyI18n.html)(permissions?'Dein Tag.<br>Deine kurzen Wege.':'a better Disneyland Paris App<br>Bereit für den Park.');if(permissions)initPush();}
 let setupFavoriteSelection=null;
 function setupBestRides(){return data&&typeof DisneyRatings!=='undefined'?DisneyRatings.ranked(data.rides).filter(ride=>!uninterested.has(ride.id)):[];}
 function updateSetupFavoriteCount(){$('setup-favorites-count').textContent=(typeof DisneyI18n==='undefined'?String:DisneyI18n.text)(`${setupFavoriteSelection?.size||0} Favoriten ausgewählt`);}
@@ -73,5 +95,8 @@ setInterval(()=>{if(data&&!document.hidden){syncPush();if(onboardingLocation&&po
 $('open-setup').onclick=()=>{onboardingAutoContinue=false;setupPhase(isInstalledApp());updateSetupLocation();openSetup();};
 
 $('setup-browser').onclick=setupChildPhase;
-$('setup-install-button').onclick=async()=>{if(installedPrompt){try{await installedPrompt.prompt();const choice=await installedPrompt.userChoice;installedPrompt=null;if(choice.outcome==='accepted')setupChildPhase();}catch{}}else{$('setup-install-instructions').textContent=(typeof DisneyI18n==='undefined'?String:DisneyI18n.text)(/iPad|iPhone|iPod/.test(navigator.userAgent)?'Safari: Teilen → Zum Home-Bildschirm → als Web-App hinzufügen. Danach a better Disneyland Paris App über das neue App-Symbol öffnen.':'Im Browser-Menü „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen. Danach a better Disneyland Paris App über das App-Symbol öffnen.');}};
+$('setup-install-button').onclick=async()=>{if(installedPrompt){if(await promptAppInstallation())setupChildPhase();}else refreshPlatformHelp();};
 window.addEventListener('appinstalled',()=>{if(!appReady||$('setup-dialog').hidden)return;if(!$('setup-permissions-step').hidden||!$('setup-favorites-step').hidden||!$('setup-child-step').hidden)return;setupChildPhase();});
+
+refreshPlatformHelp();
+window.addEventListener('disneylanguagechange',refreshPlatformHelp);

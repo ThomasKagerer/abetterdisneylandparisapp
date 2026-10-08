@@ -1,6 +1,6 @@
 {
-  "build": 115,
+  "build": 116,
   "items": [
-    "English defaults for search and sharing previews. Browser language selection is preserved."
+    "Android installation and notification guidance, with the existing menus and setup flow preserved."
   ]
 }

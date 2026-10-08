@@ -18,7 +18,7 @@ function promptModel(doc){
   const cleanup=()=>{form.removeEventListener('submit',submit);skip.removeEventListener('click',omit);dialog.removeEventListener('close',omit);input.removeEventListener('input',clear);modelPrompts.delete(dialog);};
   const finish=value=>{if(finished)return;finished=true;cleanup();if(dialog.open)dialog.close();resolve(value);};
   const omit=()=>finish(''),clear=()=>input.setCustomValidity('');
-  const submit=e=>{e.preventDefault();const model=modelName(input.value.trim());if(input.value.trim()&&!model){input.setCustomValidity(typeof DisneyI18n==='undefined'?'Bitte prüfe das iPhone-Modell.':DisneyI18n.text('Bitte prüfe das iPhone-Modell.'));input.reportValidity();return;}finish(model);};
+  const submit=e=>{e.preventDefault();const model=modelName(input.value.trim());if(input.value.trim()&&!model){input.setCustomValidity(typeof DisneyI18n==='undefined'?'Bitte prüfe das Smartphone-Modell.':DisneyI18n.text('Bitte prüfe das Smartphone-Modell.'));input.reportValidity();return;}finish(model);};
   form.addEventListener('submit',submit);skip.addEventListener('click',omit);dialog.addEventListener('close',omit);input.addEventListener('input',clear);input.value='';clear();
   try{dialog.showModal();}catch{finish('');}
  });
@@ -31,7 +31,7 @@ function create(options={},env=root){
  const device=()=>{const saved=savedModel()||localModel,model=saved||autoModel;return {...environment(env),...(model?{model,modelSource:saved?'manual':'browser'}:{})};};
  function askModel(reason){
   if(modelRequest)return modelRequest;
-  if(modelAsked||savedModel()||autoModel||!MODEL_FAILURES.has(reason)||environment(env).platform!=='iOS'||!options.onModelNeeded)return Promise.resolve();
+  if(modelAsked||savedModel()||autoModel||!MODEL_FAILURES.has(reason)||!['iOS','Android'].includes(environment(env).platform)||!options.onModelNeeded)return Promise.resolve();
   modelAsked=true;
   modelRequest=Promise.resolve().then(()=>options.onModelNeeded()).then(value=>{const model=modelName(value);if(model){localModel=model;try{storage?.setItem(MODEL_KEY,model);}catch{}}}).catch(()=>{});
   return modelRequest;
